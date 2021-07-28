@@ -722,6 +722,12 @@
                         <td class="sample06_M1"></td>
                         <td class="sample06_R1 result"></td>
                     </tr>
+                    <tr>
+                        <td class="sample06_N2"></td>
+                        <td class="sample06_Q2"></td>
+                        <td class="sample06_M2"></td>
+                        <td class="sample06_R2 result"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -919,7 +925,21 @@
         //sample06
         //06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)
         {
-            
+            const str = "자바스크립트(javascript) 공부";
+            const text = str.charAt(4);
+
+            document.querySelector(".sample06_N1").innerHTML = "1";
+            document.querySelector(".sample06_Q1").innerHTML = str;
+            document.querySelector(".sample06_M1").innerHTML = "charAt(4)";
+            document.querySelector(".sample06_R1").innerHTML = text;
+
+            const str2 = "자바스크립트(javascript) 공부";
+            const text2 = str2.charAt();
+
+            document.querySelector(".sample06_N2").innerHTML = "2";
+            document.querySelector(".sample06_Q2").innerHTML = str2;
+            document.querySelector(".sample06_M2").innerHTML = "charAt()";
+            document.querySelector(".sample06_R2").innerHTML = text2; 
         }
     </script>
 </body>
