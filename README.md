@@ -7,4 +7,4 @@
 
 
 ### CSS 레퍼런스 <a href="https://kimseounyoung.github.io/dothome21/refer-css/index.html">바로가기</a>
-### CSS 레퍼런스 <a href="https://kimseounyoung.github.io/dothome21/refer-html/index.html">바로가기</a>
+### HTML 레퍼런스 <a href="https://kimseounyoung.github.io/dothome21/refer-html/index.html">바로가기</a>
