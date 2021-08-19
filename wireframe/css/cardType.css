@@ -69,3 +69,34 @@ body {
 }
 
 /* cardType02 */
+.cardType02 {
+    padding: 150px 0;
+    font-family: 'S-CoreDream';
+}
+.cardType02 h2 {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 23px;
+}
+.cardType02 p {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cardType02 .card-wrap {
+
+}
+.cardType02 .card-wrap .card {
+    width: 285px;
+    height: 356px;
+    margin: 33px 0 0 20px;
+    padding: 15px 15px 19px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+    background-color: #fff;
+}
+.cardType02 .card-wrap .card .card-title {}
+.cardType02 .card-wrap .card .card-desc {}
+.cardType02 .card-wrap .card .card-site {}
