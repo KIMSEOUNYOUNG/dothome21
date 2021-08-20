@@ -156,9 +156,17 @@ body {
     display: inline;
     list-style: none;
 }
+.cardType03 .header .rank li a {
+    font-size: 16px;
+    font-weight: 800;
+}
+.cardType03 .header .rank li.active a {
+    color: red;
+}
 .cardType03 .header .rank li a:first-child {
     margin-right: 10px;
 }
+
 .cardType03 .card-wrap .card {
     margin-bottom: 15px;
     box-sizing: border-box;
@@ -185,6 +193,7 @@ body {
     border-radius: 20px;
     background-color: #ff5151;
     color: #fff;
+    margin-bottom: 5px;
 
 }
 .cardType03 .card-wrap .card .img-wrap .card-site2 span {
@@ -196,7 +205,7 @@ body {
     border-radius: 20px;
     background-color: #5465ff;
     color: #fff;
-
+    margin-bottom: 5px;
 }
 .cardType03 .card-wrap .card .img-wrap .card-site3 span {
     display: inline-block;
@@ -207,7 +216,7 @@ body {
     border-radius: 20px;
     background-color: #ff4646;
     color: #fff;
-
+    margin-bottom: 5px;
 }
 .cardType03 .card-wrap .card .img-wrap .card-site4 span {
     display: inline-block;
@@ -218,7 +227,7 @@ body {
     border-radius: 20px;
     background-color: #11c865;
     color: #fff;
-
+    margin-bottom: 5px;
 }
 .cardType03 .card-wrap .card .img-wrap .card-title {
     display: block;
