@@ -127,3 +127,116 @@ body {
     background-color: #000;
     color: #fff;
 }
+
+/* cardType03 */
+.cardType03 {
+    padding: 150px 0;
+    font-family: 'NanumSquare';
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.cardType03 .header {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.cardType03 .header p {
+    display: inline;
+    font-size: 18px;
+    font-weight: 300;
+    float: left;
+}
+.cardType03 .header .rank {
+    float: right;
+    text-align: right;
+}
+.cardType03 .header .rank li {
+    display: inline;
+    list-style: none;
+}
+.cardType03 .header .rank li a:first-child {
+    margin-right: 10px;
+}
+.cardType03 .card-wrap .card {
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.cardType03 .card-wrap {}
+.cardType03 .card-wrap .card {
+    display: flex;
+}
+.cardType03 .card-wrap .card .card-img {
+    height: 185px;
+}
+.cardType03 .card-wrap .card .img-wrap {
+    height: 185px;
+    width: 895px;
+    margin-left: 19px;
+    box-sizing: border-box;
+}
+.cardType03 .card-wrap .card .img-wrap .card-site1 span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    /* margin: 46px 691px 9px 20px; */
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #ff5151;
+    color: #fff;
+
+}
+.cardType03 .card-wrap .card .img-wrap .card-site2 span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    /* margin: 46px 691px 9px 20px; */
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #5465ff;
+    color: #fff;
+
+}
+.cardType03 .card-wrap .card .img-wrap .card-site3 span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    /* margin: 46px 691px 9px 20px; */
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #ff4646;
+    color: #fff;
+
+}
+.cardType03 .card-wrap .card .img-wrap .card-site4 span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    /* margin: 46px 691px 9px 20px; */
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #11c865;
+    color: #fff;
+
+}
+.cardType03 .card-wrap .card .img-wrap .card-title {
+    display: block;
+    font-size: 26px;
+    font-weight: 500;
+}
+.cardType03 .card-wrap .card .img-wrap .card-desc {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.53;
+}
+.cardType03 .card-wrap .card .img-wrap .card-date {
+    display: block;
+    text-decoration: underline;
+    margin: 17px 0 0 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #555;
+}

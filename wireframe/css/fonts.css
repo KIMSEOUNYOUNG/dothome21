@@ -111,3 +111,35 @@
     font-style: normal;
 }
 
+/* 나눔 스퀘어 */
+@font-face {
+  font-family: 'NanumSquare';
+  src: local(NanumSquare-Regular),
+    url(/path/to/NanumSquare-Regular.woff2) format("woff2"),
+    url(/path/to/NanumSquare-Regular.woff) format("woff"),
+    url(/path/to/NanumSquare-Regular.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: local(NanumSquare-Bold),
+    url(/path/to/NanumSquare-Bold.woff2) format("woff2"),
+    url(/path/to/NanumSquare-Bold.woff) format("woff"),
+    url(/path/to/NanumSquare-Bold.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: local(NanumSquare-ExtraBold),
+    url(/path/to/NanumSquare-ExtraBold.woff2) format("woff2"),
+    url(/path/to/NanumSquare-ExtraBold.woff) format("woff"),
+    url(/path/to/NanumSquare-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+}
+  
