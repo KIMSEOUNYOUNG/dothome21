@@ -1,0 +1,18 @@
+/* imageType */
+body {
+    background-color: #f3f3f3;
+}
+.imageType {
+    margin: 100px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+/* imageType01 */
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType01 h2 {
+    font-size: 50px;
+    font-weight: 500;
+}
