@@ -7,6 +7,7 @@ body {
     background-color: #fff;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
+
 /* imageType01 */
 .imageType01 {
     font-family: 'GmarketSans';
@@ -15,4 +16,193 @@ body {
 .imageType01 h2 {
     font-size: 50px;
     font-weight: 500;
+    margin-bottom: 40px;
 }
+.imageType01 .img-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType01 .img-wrap .img {
+    background-image: url(../img2/image01.jpg);
+    width: 590px;
+    height: 460px;
+    position: relative;
+}
+.imageType01 .img-wrap .img.arabika {
+    background-image: url(../img2/image02.jpg);
+}
+.imageType01 .img-wrap .img .card-wrap{
+    width: 434.4px;
+    height: 152px;
+    padding: 15px;
+    background-color: rgba(140, 140, 140, 0.6);
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.imageType01 .img-wrap .img .card-wrap.black {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+.imageType01 .img-wrap .img .card-wrap em{
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+.imageType01 .img-wrap .img .card-wrap .img-desc{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 29px;
+}
+.imageType01 .img-wrap .img .card-wrap .img-detail{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/* imageType02 */
+.imageType02 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType02 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.imageType02 .img-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType02 .img-wrap .img {
+    background-image: url(../img2/image03.jpg);
+    width: 386px;
+    height: 386px;
+    position: relative;
+}
+.imageType02 .img-wrap .img.americano {
+    background-image: url(../img2/image04.jpg);
+}
+.imageType02 .img-wrap .img.latte {
+    background-image: url(../img2/image05.jpg);
+}
+.imageType02 .img-wrap .img em {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: rgba(106, 106, 106, 0.45);
+    margin-bottom: 20px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.imageType02 .img-wrap .img em.black {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+.imageType02 .img-wrap .img .img-detail {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    padding: 14px 15px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 50%; top: 65%;
+    transform: translate(-50%);
+}
+
+/* imageType03 */
+.imageType03 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType03 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.imageType03 .img-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType03 .img-wrap #img {
+    width: 590px;
+    height: 590px;
+    background-image: url(../img2/image06.jpg);
+    position: relative;
+}
+.imageType03 .img-wrap #img .card-wrap {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 440px;
+    padding: 15px 15px 15px 15px;
+    background-color: rgba(140, 140, 140, 0.6);;
+}
+.imageType03 .img-wrap #img .card-wrap em {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.imageType03 .img-wrap #img .card-wrap .img-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.imageType03 .img-wrap .content1 .img {
+    width: 285px;
+    height: 285px;
+    background-image: url(../img2/image07.jpg);
+    position: relative;
+    margin-bottom: 20px;
+}
+.imageType03 .img-wrap .content1 .img.tamp {
+    background-image: url(../img2/image09.jpg);
+}
+.imageType03 .img-wrap .content1 .img .img-desc {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 3px 6px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.45);;
+    position: absolute;
+    left: 20px; bottom: 20px;
+}
+
+.imageType03 .img-wrap .content2 .img {
+    width: 285px;
+    height: 285px;
+    background-image: url(../img2/image08.jpg);
+    position: relative;
+    margin-bottom: 20px;
+}
+.imageType03 .img-wrap .content2 .img.espresso {
+    background-image: url(../img2/image10.jpg);
+}
+.imageType03 .img-wrap .content2 .img .img-desc {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 3px 6px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.45);;
+    position: absolute;
+    left: 20px; bottom: 20px;
+}
+
