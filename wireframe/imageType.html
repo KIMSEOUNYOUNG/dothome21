@@ -7,7 +7,7 @@
     <meta name="author" content="webstoryboy">
     <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
     <meta name="keywords" content="NOMORE, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, 프론트앤드개발자, publisher, css3, html, markup, design.">
-    <title>ImageType01</title>
+    <title>ImageType</title>
 
 
     <!-- CSS -->
@@ -15,15 +15,54 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <!-- Card Type CSS -->
+    <!-- Image Type CSS -->
     <link rel="stylesheet" href="css/imageType.css">
 
     <!--나눔 스퀘어 폰트-->
     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 </head>
 <body>
+    <!--이미지 표현 방법
+        (웹 접근성)
+        01. 이미지를 img 태그 (alt) ==> 의미가 있을 때
+        02. 이미지를 background 속성 ==> 의미가 없을 때(장식, 배경)
+
+        03. 의미가 있는 이미지도 background로 사용 (최근-코딩이 편함) ==> 이미지 스프라이트 기법
+        - 이미지 스프라이트를 사용하게 되면 접근성이 깨짐 ==> IR 효과 (alt)
+
+        04. 이미지 해상도 ==> 이미지 분류 ==> picture 태그, figure 태그(인용)
+    -->
+
     <!--imageType01-->
     <section class="imageType">
+        <div class="container">
+            <div class="imageType01">
+                <h2>커피 원두의 종류</h2>
+                <div class="image-wrap">
+                    <div class="image">
+                        <img src="../wireframe/img2/image01.jpg" alt="로부스타">
+                        <div class="image-cont">
+                            <h3 class="image-title">로부스타</h3>
+                            <p class="image-desc">커피계의 카페인 여왕인 로부스타는 카페인 함량이 아라비카 원두의
+                                약 두 배입니다. 그런 만큼 더 강하고 약간 쓴 맛이 납니다.</p>
+                            <a class="image-btn" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../wireframe/img2/image02.jpg" alt="아라비카">
+                        <div class="image-cont s2">
+                            <h3 class="image-title">아라비카</h3>
+                            <p class="image-desc">커피계의 샴페인이라고도 할 수 있는 아라비카 커피는 풍부한 향을
+                                지니고 있으며, 부드러우면서도 깊은 맛을 선사합니다.</p>
+                            <a class="image-btn" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="imageType">
         <div class="container">
             <div class="imageType01">
                 <h2>커피 원두의 종류</h2>
@@ -46,11 +85,42 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
     <!--imageType01-->
 
     <!--imageType02-->
     <section class="imageType">
+        <div class="container">
+            <div class="imageType02">
+                <h2>커피의 종류</h2>
+                <div class="image-wrap">
+                    <figure class="image">
+                        <img class="image-img" src="../wireframe/img2/image03.jpg" alt="에스프레소 이미지">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">에스프레소</h3>
+                            <a  class="image-btn" href="#">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img class="image-img" src="../wireframe/img2/image04.jpg" alt="아메리카노 이미지">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">아메리카노</h3>
+                            <a  class="image-btn" href="#">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img class="image-img" src="../wireframe/img2/image05.jpg" alt="라떼 이미지">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">라떼</h3>
+                            <a  class="image-btn" href="#">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="imageType">
         <div class="container">
             <div class="imageType02">
                 <h2>커피의 종류</h2>
@@ -68,7 +138,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--imageType02-->
 
     <!--imageType03-->
