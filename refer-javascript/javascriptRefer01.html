@@ -71,11 +71,12 @@
 
 
     <hr>
-
-    <div id="sample1" class="sample">
-        <h2>01. 변수 : 데이터 저장소 <span class="dot"></span></h2>
+        
+    <!--sample01-->
+    <div id="sample01" class="sample">
+        <h2>01. 변수 : 데이터 저장<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<pre class="line-numbers"><code class="language-js">{
     var x = 100;    //변수 x에 숫자 100을 저장
     var y = 200;    //변수 y에 숫자 200을 저장
     var z = "javascript";   //변수 z에 문자 javascript를 저장
@@ -88,6 +89,19 @@
 </code></pre>
         </div>
     </div>
+    <div class="answer">
+        <div class="button btn1">결과보기</div>
+        <p class="vis answer1">
+            100<br>200<br>javascript
+        </p>
+    </div>
+    <script>
+        document.querySelector(".btn1").addEventListener("click", function(){
+            document.querySelector(".answer1").classList.toggle("view");
+            document.querySelector(".btn1").classList.toggle("view");
+        });
+    </script>
+    <!--sample01-->
 
     <hr>
 
@@ -110,6 +124,18 @@
 </code></pre>
         </div>
     </div>
+    <div class="answer">
+        <div class="button btn2">결과보기</div>
+        <p class="vis answer2">
+            300<br>400<br>jquery
+        </p>
+    </div>
+    <script>
+        document.querySelector(".btn2").addEventListener("click", function(){
+            document.querySelector(".answer2").classList.toggle("view");
+            document.querySelector(".btn2").classList.toggle("view");
+        });
+    </script>
 
     <hr>
 

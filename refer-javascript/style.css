@@ -169,6 +169,31 @@ hr {
 .mt20 {
     margin: 20px 0 10px 0;
 }
+.answer .button {
+    display: inline-block;
+    padding: 13px 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.answer .button.view {
+    border-radius: 5px 5px 0 0;
+}
+.answer .vis {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    /* border: 0;
+    margin: 0; */
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+.answer .vis.view {
+    display: block;
+}
+
 @media (max-width: 800px){
     body {
         padding: 5%;
