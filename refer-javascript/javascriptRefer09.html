@@ -263,26 +263,6 @@
     btn8.addEventListener("click", function(){
         document.querySelector(".text4-8").innerHTML = "당신이 보고 있는 브라우저 왼쪽의 위치값(screenX)은 " + screenX + "px입니다.";
     });
-
-    window.addEventListener("resize", ()=>{
-        const innerW = window.innerWidth;
-        const innerH = window.innerHeight;
-        const outerW = window.outerWidth;
-        const outerH = window.outerHeight;
-        const screenT = window.screenTop;
-        const screenL = window.screenLeft;
-        const screenY = window.screenY;
-        const screenX = window.screenX;
-
-        document.querySelector(".text4-1").innerHTML = "당신이 보고 있는 브라우저 화면의 가로값(innerWidth)은 " + innerW + "px입니다.";
-        document.querySelector(".text4-2").innerHTML = "당신이 보고 있는 브라우저 화면의 세로값(innerHeight)은 " + innerH + "px입니다.";
-        document.querySelector(".text4-3").innerHTML = "당신이 보고 있는 브라우저 전체의 가로값(outerWidth)은 " + outerW + "px입니다.";
-        document.querySelector(".text4-4").innerHTML = "당신이 보고 있는 브라우저 전체의 세로값(outerHeight)은 " + outerH + "px입니다.";
-        document.querySelector(".text4-5").innerHTML = "당신이 보고 있는 브라우저 위쪽의 위치값(screenTop)은 " + screenT + "px입니다.";
-        document.querySelector(".text4-6").innerHTML = "당신이 보고 있는 브라우저 왼쪽의 위치값(screenLeft)은 " + screenL + "px입니다.";
-        document.querySelector(".text4-7").innerHTML = "당신이 보고 있는 브라우저 위쪽의 위치값(screenY)은 " + screenY + "px입니다.";
-        document.querySelector(".text4-8").innerHTML = "당신이 보고 있는 브라우저 왼쪽의 위치값(screenX)은 " + screenX + "px입니다.";
-    });
 }
 </code></pre>
         </div>

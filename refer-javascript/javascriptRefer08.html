@@ -194,6 +194,37 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".sample01_R1").innerHTML = Math.round(1.34);
+
+    document.querySelector(".sample01_R2").innerHTML = Math.round(1.64);
+
+    document.querySelector(".sample01_R3").innerHTML = Math.round(1.5);
+
+    document.querySelector(".sample01_R4").innerHTML = Math.round(-1.34);
+
+    document.querySelector(".sample01_R5").innerHTML = Math.round(-1.64);
+
+    document.querySelector(".sample01_R6").innerHTML = Math.round(-1.5);
+
+    document.querySelector(".sample01_R7").innerHTML = Math.floor(1.34);
+
+    document.querySelector(".sample01_R8").innerHTML = Math.floor(1.64);
+
+    document.querySelector(".sample01_R9").innerHTML = Math.floor(-1.34);
+
+    document.querySelector(".sample01_R10").innerHTML = Math.floor(-1.64);
+
+    document.querySelector(".sample01_R11").innerHTML = Math.ceil(1.34);
+
+    document.querySelector(".sample01_R12").innerHTML = Math.ceil(1.64);
+
+    document.querySelector(".sample01_R13").innerHTML = Math.ceil(-1.34);
+
+    document.querySelector(".sample01_R14").innerHTML = Math.ceil(1.64);
+
+    document.querySelector(".sample01_R15").innerHTML = Math.trunc(1.64);
+
+    document.querySelector(".sample01_R16").innerHTML = Math.trunc(1.64);
 }
 </code></pre>
         </div>
@@ -250,6 +281,17 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".sample02_B1 button").addEventListener("click", function(){
+        document.querySelector(".sample02_R1").innerHTML = Math.random();
+    });
+
+    document.querySelector(".sample02_B2 button").addEventListener("click", function(){
+        document.querySelector(".sample02_R2").innerHTML = Math.floor(Math.random()*10);
+    });
+
+    document.querySelector(".sample02_B3 button").addEventListener("click", function(){
+        document.querySelector(".sample02_R3").innerHTML = Math.floor(Math.random()*10) + 10;
+    });
 }
 </code></pre>
         </div>
@@ -317,25 +359,35 @@
             document.querySelector(".sample01_M10").innerHTML = "Math.floor()";
             document.querySelector(".sample01_R10").innerHTML = Math.floor(-1.64);
 
-            document.querySelector(".sample01_N11").innerHTML = "7";
+            document.querySelector(".sample01_N11").innerHTML = "11";
             document.querySelector(".sample01_Q11").innerHTML = "1.34";
             document.querySelector(".sample01_M11").innerHTML = "Math.ceil()";
             document.querySelector(".sample01_R11").innerHTML = Math.ceil(1.34);
 
-            document.querySelector(".sample01_N12").innerHTML = "8";
+            document.querySelector(".sample01_N12").innerHTML = "12";
             document.querySelector(".sample01_Q12").innerHTML = "1.64";
             document.querySelector(".sample01_M12").innerHTML = "Math.ceil()";
             document.querySelector(".sample01_R12").innerHTML = Math.ceil(1.64);
 
-            document.querySelector(".sample01_N13").innerHTML = "9";
+            document.querySelector(".sample01_N13").innerHTML = "13";
             document.querySelector(".sample01_Q13").innerHTML = "-1.34";
             document.querySelector(".sample01_M13").innerHTML = "Math.ceil()";
             document.querySelector(".sample01_R13").innerHTML = Math.ceil(-1.34);
 
-            document.querySelector(".sample01_N14").innerHTML = "10";
-            document.querySelector(".sample01_Q14").innerHTML = "-1.64";
+            document.querySelector(".sample01_N14").innerHTML = "14";
+            document.querySelector(".sample01_Q14").innerHTML = "1.64";
             document.querySelector(".sample01_M14").innerHTML = "Math.ceil()";
-            document.querySelector(".sample01_R14").innerHTML = Math.ceil(-1.64);
+            document.querySelector(".sample01_R14").innerHTML = Math.ceil(1.64);
+
+            document.querySelector(".sample01_N15").innerHTML = "15";
+            document.querySelector(".sample01_Q15").innerHTML = "1.64";
+            document.querySelector(".sample01_M15").innerHTML = "Math.trunc()";
+            document.querySelector(".sample01_R15").innerHTML = Math.trunc(1.64);
+
+            document.querySelector(".sample01_N16").innerHTML = "16";
+            document.querySelector(".sample01_Q16").innerHTML = "1.64";
+            document.querySelector(".sample01_M16").innerHTML = "Math.trunc()";
+            document.querySelector(".sample01_R16").innerHTML = Math.trunc(1.64);
         }
 
         //02.

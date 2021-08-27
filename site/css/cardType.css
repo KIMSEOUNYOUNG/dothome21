@@ -210,3 +210,44 @@ body {
     text-decoration: underline;
     margin-top: 10px;
 }
+
+/* clovaTest */
+.clovaTest {
+    font-family: 'Roboto';
+    padding: 100px 0px;
+}
+.clovaTest h2 {
+    font-size: 54px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.35;
+    margin-bottom: 73px;
+}
+.clovaTest .card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.clovaTest .card-wrap .img-wrap {
+    position: relative;
+}
+.clovaTest .card-wrap .img-wrap .card-img {
+    width: 388px;
+    height: 610px;
+}
+.clovaTest .card-wrap .img-wrap .card-txt {
+    position: absolute;
+    left: 45px; top: 59px;
+}
+.clovaTest .card-wrap .card-txt .card-cate {
+    font-size: 14.5px;
+    font-weight: bold;
+    color: #a9a9a9;
+    margin-bottom: 14px;
+}
+.clovaTest .card-wrap .card-txt .card-desc {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.4;
+    width: 330px;
+    word-break: keep-all;
+}
