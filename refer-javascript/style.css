@@ -350,3 +350,10 @@ hr {
     border-radius: 5px;
     font-style: normal;
 }
+
+/* table */
+table {border-collapse: collapse;}
+table tr td {
+    border: 1px solid #989898;
+    padding: 5px;
+}
