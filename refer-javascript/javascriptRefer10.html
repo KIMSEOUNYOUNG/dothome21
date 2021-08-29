@@ -33,9 +33,9 @@
         .ex1 > div img {
             width: 100%;
             border-radius: 5px;
-            /* display: block; */
             vertical-align: top;
         }
+
         /* ex2 */
         .ex2 {
             display: flex;
@@ -56,9 +56,9 @@
         .ex2 > div img {
             width: 100%;
             border-radius: 5px;
-            /* display: block; */
             vertical-align: top;
         }
+
         /* ex3 */
         .ex3 {
             display: flex;
@@ -79,8 +79,40 @@
         .ex3 > div img {
             width: 100%;
             border-radius: 5px;
-            /* display: block; */
             vertical-align: top;
+        }
+        @media (max-width: 800px){
+            .ex1 {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .ex1 > div {
+                width: 31%;
+                margin: 1%;
+            }
+            .ex2 {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .ex2 > div {
+                width: 31%;
+                margin: 1%;
+            }
+            .ex3 {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .ex3 > div {
+                width: 31%;
+                margin: 1%;
+            }
+            .example {
+                padding: 10px;
+            }
+            .btn a {
+                display: block;
+                text-align: center;
+            }
         }
     </style>
 </head>
