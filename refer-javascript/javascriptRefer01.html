@@ -89,18 +89,14 @@
 </code></pre>
         </div>
     </div>
-    <div class="answer">
-        <div class="button btn1">결과보기</div>
-        <p class="vis answer1">
-            100<br>200<br>javascript
-        </p>
+    <div class="result">
+        <h3><a href="#">결과보기</a></h3>
+        <div>
+            <span class="result1-1"></span>
+            <span class="result1-2"></span>
+            <span class="result1-3"></span>
+        </div>
     </div>
-    <script>
-        document.querySelector(".btn1").addEventListener("click", function(){
-            document.querySelector(".answer1").classList.toggle("view");
-            document.querySelector(".btn1").classList.toggle("view");
-        });
-    </script>
     <!--sample01-->
 
     <hr>
@@ -125,18 +121,14 @@
 </code></pre>
         </div>
     </div>
-    <div class="answer">
-        <div class="button btn2">결과보기</div>
-        <p class="vis answer2">
-            300<br>400<br>jquery
-        </p>
+    <div class="result">
+        <h3><a href="#">결과보기</a></h3>
+        <div>
+            <span class="result2-1"></span>
+            <span class="result2-2"></span>
+            <span class="result2-3"></span>
+        </div>
     </div>
-    <script>
-        document.querySelector(".btn2").addEventListener("click", function(){
-            document.querySelector(".answer2").classList.toggle("view");
-            document.querySelector(".btn2").classList.toggle("view");
-        });
-    </script>
     <!--sample02-->
 
     <hr>
@@ -825,6 +817,48 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        //정답보기
+        
+        // document.querySelector(".result1 h3").addEventListener("click", function(){
+        //     document.querySelector(".result1 div").classList.toggle("show");
+        // });
+        // document.querySelector(".result2 h3").addEventListener("click", function(){
+        //     document.querySelector(".result2 div").classList.toggle("show");
+        // });
+
+        document.querySelectorAll(".result h3").forEach(el => {
+            el.addEventListener("click", function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("show");
+            });
+        });
+
+        //01. 변수 : 데이터 저장
+        {
+            var x = 100;    //변수 x에 숫자 100을 저장
+            var y = 200;    //변수 y에 숫자 200을 저장
+            var z = "javascript";   //변수 z에 문자 javascript를 저장
+
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
+        }
+
+        //02. 변수 : 데이터 저장 + 데이터 변경
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+            x = 300;    //변수 x의 값이 100에서 300으로 변경
+            y = 400;
+            z = "jquery";
+
+            document.querySelector(".result2-1").innerHTML = x;
+            document.querySelector(".result2-2").innerHTML = y;
+            document.querySelector(".result2-3").innerHTML = z;
+        }
+    </script>
 </body>
 
 </html>
