@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Effect</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="../assets/css/style.css"></link>
 </head>
+
 <body class="bg bg1">
     <!-- info -->
     <div class="info">
@@ -27,8 +30,29 @@
     </div>
 
     <div class="info bottom">
-        <button>소스보기</button>
+        <button class="bottom-btn">소스보기</button>
+    </div>
+
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <h2>소스</h2>
+                <p>신차는 기존 5인승과 7인승 모델에서 2열 독립 시트가 적용된 6인승 모델을 추가했다. 6인승 모델은 2열 시트에 1열과 동일한 가니쉬의 센터 콘솔을 비롯 무선 충전 시스템, 컵홀더, 수납함 등을 적용했다. 동승석에는 에르고 모션 시트를 장착했다.</p>
+                <button class="modal-btn">닫기</button>
+            </div>
+        </div>
     </div>
     <!-- //info -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        $(".bottom button").click(function(){
+            $("#modal").removeClass().addClass("show");
+        });
+        $(".modal-cont button").click(function(){
+            $("#modal").addClass("hide");
+        });
+    </script>
 </body>
 </html>

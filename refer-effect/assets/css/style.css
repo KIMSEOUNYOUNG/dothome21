@@ -1,45 +1,39 @@
 @font-face {
-  font-family: 'NEXONLv1Gothic';
+  font-family: "NEXONLv1Gothic";
   font-weight: 300;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'NEXONLv1Gothic';
+  font-family: "NEXONLv1Gothic";
   font-weight: 400;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'NEXONLv1Gothic';
+  font-family: "NEXONLv1Gothic";
   font-weight: 700;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'NEXONLv2Gothic';
+  font-family: "NEXONLv2Gothic";
   font-weight: 300;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'NEXONLv2Gothic';
+  font-family: "NEXONLv2Gothic";
   font-weight: 400;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'NEXONLv2Gothic';
+  font-family: "NEXONLv2Gothic";
   font-weight: 700;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
   font-style: normal;
 }
-
 body,
 div,
 dl,
@@ -80,9 +74,8 @@ figcaption {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .bg::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -133,29 +126,21 @@ figcaption {
   height: 100vh;
   overflow: hidden;
   background: #11e8bb;
-  background: -webkit-gradient(linear, left top, left bottom, from(#11e8bb), to(#8200c9));
   background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
 }
-
 #main.game {
   background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
-
 #main.menu {
-  background: -webkit-gradient(linear, left bottom, left top, from(#96fbc4), to(#f9f586));
   background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
-
 #main.mouse {
   background: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
 }
-
 #main.parallex {
   background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
 }
-
 #main.slider {
-  background: -webkit-gradient(linear, left bottom, left top, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));
   background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
@@ -163,8 +148,7 @@ figcaption {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font-size: 10vw;
   white-space: nowrap;
   font-family: "Six Caps", sans-serif;
@@ -173,29 +157,23 @@ figcaption {
   letter-spacing: 1vw;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #8200c9), to(#11e8bb));
   background-image: linear-gradient(to bottom, #8200c9 55%, #11e8bb);
 }
-
 #contents h1.game {
   background-image: linear-gradient(120deg, #fa7551, #eb5d36);
 }
-
 #nav {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   bottom: 10px;
   top: auto;
 }
-
 #nav li {
   list-style: none;
   display: inline;
 }
-
 #nav li a {
   color: #fff;
   text-decoration: none;
@@ -209,15 +187,11 @@ figcaption {
   text-align: center;
   margin: 4px;
   font-family: "NEXONLv1Gothic";
-  -webkit-box-shadow: inset 0 0 0 #fff;
-          box-shadow: inset 0 0 0 #fff;
-  -webkit-transition: all 0.4s;
+  box-shadow: inset 0 0 0 #fff;
   transition: all 0.4s;
 }
-
 #nav li a:hover {
-  -webkit-box-shadow: inset 0 -100px 0 #fff;
-          box-shadow: inset 0 -100px 0 #fff;
+  box-shadow: inset 0 -100px 0 #fff;
   color: #6c4a70;
 }
 
@@ -225,19 +199,16 @@ figcaption {
   font-family: "NEXONLv1Gothic";
   padding: 20px;
 }
-
 .info.right {
   position: absolute;
   right: 0px;
   top: 0px;
 }
-
 .info.bottom {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
 .info h1 {
   font-weight: 500;
   font-size: 20px;
@@ -246,17 +217,14 @@ figcaption {
   display: inline-block;
   margin-bottom: 10px;
 }
-
 .info p {
   font-weight: 500;
   font-size: 16px;
 }
-
 .info li {
   display: inline;
   list-style: none;
 }
-
 .info li a {
   display: inline-block;
   text-decoration: none;
@@ -270,23 +238,162 @@ figcaption {
   font-size: 12px;
   margin-bottom: 5px;
 }
-
 .info li.active a {
   background-color: #fff;
   color: #000;
 }
-
-.info button {
+.info .bottom-btn {
   background: transparent;
   border: 1px solid #000;
   padding: 5px 20px;
   color: #000;
   border-radius: 50px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+.info .bottom-btn:hover {
+  box-shadow: 0 -50px 0 #fff inset;
+}
 
-.info button:hover {
-  -webkit-box-shadow: 0 -50px 0 #fff inset;
-          box-shadow: 0 -50px 0 #fff inset;
+#modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  transform: scale(0);
+}
+#modal .modal-bg {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#modal .modal-bg .modal-cont {
+  background: #fff;
+  padding: 3vw;
+  max-width: 50vw;
+  border-radius: 5px;
+}
+#modal .modal-bg .modal-cont h2 {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#modal .modal-bg .modal-cont p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+#modal .modal-bg .modal-cont .modal-btn {
+  display: block;
+  float: right;
+  border: 1px solid #000;
+  background: #000;
+  border-radius: 20px;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#modal.show {
+  -webkit-animation: unfoldIn 1s ease forwards;
+          animation: unfoldIn 1s ease forwards;
+}
+
+@-webkit-keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+#modal.show.hide {
+  -webkit-animation: unfoldOut 1s ease forwards;
+          animation: unfoldOut 1s ease forwards;
+}
+
+@-webkit-keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+#modal.show .modal-bg .modal-cont {
+  transform: scale(0);
+  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
+          animation: zoomIn 0.5s 0.8s ease forwards;
+}
+
+#modal.show.hide .modal-bg .modal-cont {
+  transform: scale(0);
+  -webkit-animation: zoomOut 0.5s ease forwards;
+          animation: zoomOut 0.5s ease forwards;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
