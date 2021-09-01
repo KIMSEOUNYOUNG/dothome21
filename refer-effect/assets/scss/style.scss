@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+//webfont
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+    font-style: normal;
+}
+
+//reset
+//여백 초기화
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+//variable
+$font-Six: 'Six Caps';
+$font-Nexon1: 'NEXONLv1Gothic';
+$font-Nexon2: 'NEXONLv2Gothic';
+$gradient1: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%);
+$gradient2: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+$gradient3: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+$gradient4: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+$gradient5: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+$gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+
+//mixin
+@mixin positionCenter {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin content {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::before{
+        @include content;
+        background: rgba(209, 147, 111, 0.6);
+        z-index: -1;
+    }
+}
+// .bg1 {
+//     height: 100vh;
+//     background-image: url(../img/bg01@2.jpg);
+//     background-size: cover;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+// }
+@for $i from 1 through 9 {
+    .bg#{$i} {
+        background-image: url(../img/bg#{$i}@2.jpg);
+    }
+}
+
+//main
+#main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #11e8bb;
+    background: $gradient1;
+
+    &.game {
+        background: $gradient2;
+    }
+    &.menu {
+        background: $gradient3;
+    }
+    &.mouse {
+        background: $gradient4;
+    }
+    &.parallex {
+        background: $gradient5;
+    }
+    &.slider {
+        background: $gradient6;
+    }
+}
+
+#contents {
+    h1 {
+        @include positionCenter;
+        font-size: 10vw;
+        white-space: nowrap;
+        font-family: $font-Six, sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1vw;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to bottom, #8200c9 55%, #11e8bb);
+
+        &.game {
+            background-image: linear-gradient(120deg, #fa7551,  #eb5d36);
+        }
+        &.menu {}        
+        &.mouse {}        
+        &.parallex {}        
+        &.slider {}        
+    }
+}
+#nav {
+    @include positionCenter;
+    bottom: 10px;
+    top: auto;
+
+    li {
+        list-style: none;
+        display: inline;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #fff;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 14px;
+            text-align: center;
+            margin: 4px;
+            font-family: $font-Nexon1;
+            box-shadow: inset 0 0 0 #fff;
+            transition: all 0.4s;
+
+            &:hover {
+                box-shadow: inset 0 -100px 0 #fff;
+                color: #6c4a70;
+            }
+        }
+    }
+}
+
+// info
+.info {
+    font-family: $font-Nexon1;
+    padding: 20px;
+
+    &.right {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    &.bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.6;
+        border-bottom: 1px dashed #000;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    p {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    li {
+        display: inline;
+        list-style: none;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            border: 1px dashed #000;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        &.active {
+            a {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }  
+    button {
+        background: transparent;
+        border: 1px solid #000;
+        padding: 5px 20px;
+        color: #000;
+        border-radius: 50px;
+        transition: all 0.4s;
+
+        &:hover {
+            box-shadow: 0 -50px 0 #fff inset;
+        }
+    }
+}
