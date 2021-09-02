@@ -22,7 +22,6 @@
             font-family: 'NEXONLv1Gothic';
             color: #fff;
         }
-        .tab-btn {}
         .tab-btn ul {
             display: flex;
         }
@@ -165,19 +164,127 @@
                         </ul>
                     </div>
                     <div class="view-cont">
-<pre><code class="language-html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;!-- ... --&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- ... --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+                        <div class="html">
+<pre><code class="language-html">&lt;div id="tab-menu"&gt;
+    &lt;div class="tab-btn"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;소개&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;기본재료&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;고명&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;요리방법&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;플레이팅&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-cont"&gt;
+        &lt;div&gt;
+            &lt;h2&gt;올리브 카레&lt;/h2&gt;
+            &lt;p&gt;올리브를 고기대신 활용하면 씹히는 맛, 감칠 맛이 있어서 좋아요. 속이 편안해지는 것도 느낄 수 있죠.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;2인분&lt;/h2&gt;
+            &lt;p&gt;씨 없는 올리브 15개
+                양파 1/2개
+                다진 마늘 2큰술
+                시판 카레, 물
+                소금, 후추 약간
+                꿀 1작은술&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;고명채소&lt;/h2&gt;
+            &lt;p&gt;다양한 올리브 10개
+                브로콜리 30g
+                방울 토마토 4개
+                그린빈스 30g
+                연근 40g
+                단호박 40g&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;올리브 카레 만들기&lt;/h2&gt;
+            &lt;p&gt;1. 씨 없는 올리브와 양파는 굵게 다져요.
+                2. 팬에 올리브오일을 두르고 양파와 올리브를 볶아주세요.
+                3. 다진 마늘을 추가해서 다시 볶다가 물, 카레를 넣어주세요.
+                4. 좋아하는 농도까지 끓이다가 꿀을 넣고 소금, 후추 간을 해주세요.
+                *조리팁: 마지막에 꿀을 한 작은술 넣으면 카레가 더 부드러워지면서 맛있어요!&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;플레이팅 팁&lt;/h2&gt;
+            &lt;p&gt; 채소를 담을 때는 다양한 채소를 섞어서 입체감 있게 담아주세요.
+                올리브도 품종을 섞어 올려주면 보기에도 좋고 맛도 풍요로워져요.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">#tab-menu {
+    max-width: 600px;
+    background: rgb(233, 106, 83);
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    color: #fff;
+}
+.tab-btn ul {
+    display: flex;
+}
+.tab-btn li {
+    width: 20%;
+    list-style: none;
+    text-align: center;
+    font-size: 14px;
+}
+.tab-btn li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 13px;
+    display: block;
+}
+.tab-btn li.active a {
+    border-bottom: 3px solid rgb(255, 205, 42);
+}
+.tab-cont {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    color: #222;
+}
+.tab-cont > div {
+    display: none;
+}
+.tab-cont > div:first-child {
+    display: block;
+}
+.tab-cont > div h2 {
+    margin-bottom: 10px;
+}
+.tab-cont > div p {
+    line-height: 1.6;
+}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">const vTitle = document.querySelectorAll(".view-title ul li");
+const vCode = document.querySelectorAll(".view-cont > div");
+
+vTitle.forEach((element, index) => {
+    element.addEventListener("click", function(){
+
+        vTitle.forEach((el)=>{
+            el.classList.remove("active");
+        });
+        element.classList.add("active");
+
+        vCode.forEach((el)=>{
+            el.style.display = "none";
+        });
+        vCode[index].style.display = "block";
+    });
+});
+</code></pre>
+                        </div>
                     </div>
                 </div>
 
@@ -191,9 +298,21 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((el) => {
-                hljs.highlightElement(el);
+        const tabBtn = document.querySelectorAll(".tab-btn ul li");
+        const tabCont = document.querySelectorAll(".tab-cont > div");
+
+        tabBtn.forEach((element ,index)=>{
+            element.addEventListener("click", function(){
+                
+                tabBtn.forEach((el)=>{
+                    el.classList.remove("active");
+                });
+                element.classList.add("active");
+
+                tabCont.forEach((el)=>{
+                    el.style.display = "none";
+                });
+                tabCont[index].style.display = "block";
             });
         });
     </script>
