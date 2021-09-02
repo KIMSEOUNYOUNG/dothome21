@@ -435,25 +435,37 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
     }
 }
 @media(max-width: 800px){
-    .modal-cont {
-        // display: block;
-        // margin: 50px;
-    }
     .code-view {
-        width: 400px;
-        height: 400px;
+        width: 80vw;
 
         .view-header {
 
             .dot {
-                margin: 0;
+                padding: 13px 10px 10px 16px;
+    
+                span {
+                    display: inline-block;
+                    width: 10px; height: 10px;
+                    margin: 0;
+                }
             }
         }
-    }
-    .view-title {
-        li {
-            a{
-                padding: 10px 5px 12px;
+
+        .view-title {
+            li {
+                a{
+                    font-size: 14px;
+                    padding: 10px 5px 12px;
+                }
+            }
+        }
+
+        .view-cont {
+
+            height: 300px;
+
+            >div {
+                font-size: 10px;
             }
         }
     }

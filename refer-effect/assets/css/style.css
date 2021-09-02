@@ -545,13 +545,25 @@ figcaption {
 
 @media (max-width: 800px) {
   .code-view {
-    width: 400px;
-    height: 400px;
+    width: 80vw;
   }
   .code-view .view-header .dot {
+    padding: 13px 10px 10px 16px;
+  }
+  .code-view .view-header .dot span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
     margin: 0;
   }
-  .view-title li a {
+  .code-view .view-title li a {
+    font-size: 14px;
     padding: 10px 5px 12px;
+  }
+  .code-view .view-cont {
+    height: 300px;
+  }
+  .code-view .view-cont > div {
+    font-size: 10px;
   }
 }
