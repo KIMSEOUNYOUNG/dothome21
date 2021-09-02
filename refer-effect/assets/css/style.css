@@ -534,6 +534,7 @@ figcaption {
 .code-view .view-cont {
   height: 500px;
   overflow-y: scroll;
+  background: #f8f8f8;
 }
 
 .code-view .view-cont > div {
