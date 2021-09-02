@@ -556,10 +556,12 @@ figcaption {
     height: 10px;
     margin: 0;
   }
+  .code-view .view-title {
+    padding: 0 10px;
+  }
   .code-view .view-title li a {
     font-size: 14px;
     padding: 10px 5px 12px;
-    margin: 0;
   }
   .code-view .view-cont {
     height: 300px;

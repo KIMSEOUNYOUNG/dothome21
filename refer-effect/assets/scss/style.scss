@@ -208,13 +208,6 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
     }
 }
-// @media(max-width: 800px){
-//     #nav li a {
-//         width: 60px;
-//         height: 25px;
-//         font-size: 12px;
-//     }
-// }
 
 
 // info
@@ -452,11 +445,11 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
 
         .view-title {
+            padding: 0 10px;
             li {
                 a{
                     font-size: 14px;
                     padding: 10px 5px 12px;
-                    margin: 0;
                 }
             }
         }
