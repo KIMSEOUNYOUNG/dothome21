@@ -287,6 +287,16 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
     }
 }
+@media(max-width: 800px){
+    .info {
+        h1 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
 
 //modal
 #modal {

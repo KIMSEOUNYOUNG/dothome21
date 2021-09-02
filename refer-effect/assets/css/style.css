@@ -295,6 +295,15 @@ figcaption {
           box-shadow: 0 -50px 0 #fff inset;
 }
 
+@media (max-width: 800px) {
+  .info h1 {
+    font-size: 16px;
+  }
+  .info p {
+    font-size: 12px;
+  }
+}
+
 #modal {
   position: fixed;
   left: 0;
