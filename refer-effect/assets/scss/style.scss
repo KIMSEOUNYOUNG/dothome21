@@ -208,28 +208,31 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
     }
 }
-@media(max-width: 800px){
-    a {
-        width: 50px;
-        height: 25px;
-        font-size: 12px;
-    }
-}
+// @media(max-width: 800px){
+//     #nav li a {
+//         width: 60px;
+//         height: 25px;
+//         font-size: 12px;
+//     }
+// }
 
 
 // info
 .info {
     font-family: $font-Nexon1;
     padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     &.right {
-        position: absolute;
+        left: auto;
         right: 0px;
-        top: 0px;
     }
 
     &.bottom {
-        position: absolute;
+        top: auto;
+        left: auto;
         bottom: 0;
         right: 0;
     }
@@ -277,6 +280,7 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         color: #000;
         border-radius: 50px;
         transition: all 0.4s;
+        cursor: pointer;
 
         &:hover {
             box-shadow: 0 -50px 0 #fff inset;
@@ -299,10 +303,6 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         @include flexCenter;
 
         .modal-cont {
-            background: #fff;
-            padding: 3vw;
-            max-width: 50vw;
-            border-radius: 5px;
 
             h2 {
                 font-weight: 400;
@@ -322,6 +322,7 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
                 color: #fff;
                 padding: 5px 10px;
                 cursor: pointer;
+                margin-top: 10px;
             }
         }
     }
@@ -361,4 +362,60 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 @keyframes zoomOut {
     0% {transform: scale(1)}
     100% {transform: scale(0)}
+}
+
+//code-view
+.code-view {
+    background: #fff;
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .view-header {
+        border-bottom: 1px solid #f2f2f2;
+        .dot {
+            padding: 13px 10px 10px 15px;
+
+            span {
+                display: inline-block;
+                width: 12px; height: 12px;
+                border-radius: 50%;
+                margin: 0 2px;
+            }
+
+            span:nth-child(1) {
+                background-color: #f56565;
+            }
+            span:nth-child(2) {
+                background-color: #f6e05e;
+            }
+            span:nth-child(3) {
+                background-color: #48bb78;
+            }
+        }
+    }
+    .view-title {
+        font-family: $font-Nexon2;
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: #ccc;
+                display: inline-block;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+            }
+            
+            &.active a {
+                border-top: 2px solid #667eea;
+                color: #4a5568;
+            }
+        }
+    }
 }
