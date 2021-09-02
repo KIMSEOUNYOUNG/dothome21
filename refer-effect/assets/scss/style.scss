@@ -290,10 +290,10 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 @media(max-width: 800px){
     .info {
         h1 {
-            font-size: 16px;
+            font-size: 17px;
         }
         p {
-            font-size: 12px;
+            font-size: 13px;
         }
     }
 }
@@ -313,16 +313,6 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         @include flexCenter;
 
         .modal-cont {
-
-            h2 {
-                font-weight: 400;
-                font-size: 30px;
-                margin-bottom: 10px;
-            }
-            p {
-                font-weight: 300;
-                line-height: 1.6;
-            }
             .modal-btn {
                 display: block;
                 float: right;
@@ -442,5 +432,12 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         > div:first-child {
             display: block;
         }
+    }
+}
+@media(max-width: 800px){
+    .modal-cont {
+        width: 350px;
+        height: 60vh;
+
     }
 }
