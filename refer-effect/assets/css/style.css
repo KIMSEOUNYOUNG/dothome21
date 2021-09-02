@@ -544,8 +544,14 @@ figcaption {
 }
 
 @media (max-width: 800px) {
-  .modal-cont {
-    width: 350px;
-    height: 80vh;
+  .code-view {
+    width: 400px;
+    height: 400px;
+  }
+  .code-view .view-header .dot {
+    margin: 0;
+  }
+  .view-title li a {
+    padding: 10px 5px 12px;
   }
 }
