@@ -230,7 +230,7 @@ Query OK, 0 rows affected (0.04 sec)
                     <div class="bs-callout bs-callout-info">
                         SHOW TABLES;
                     </div>
-<pre class="language-js"><code>show tables;
+<pre class="language-js"><code>mysql> show tables;
 +------------------+
 | Tables_in_test02 |
 +------------------+
@@ -243,7 +243,7 @@ Query OK, 0 rows affected (0.04 sec)
                     <div class="bs-callout bs-callout-info">
                         DESC 테이블 이름;
                     </div>
-<pre class="language-js"><code>desc myMember;
+<pre class="language-js"><code>mysql> desc myMember;
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
 +------------+------------------+------+-----+---------+----------------+
@@ -261,7 +261,7 @@ Query OK, 0 rows affected (0.04 sec)
                     <div class="bs-callout bs-callout-info">
                         DROP TABLE 테이블 이름;
                     </div>
-<pre class="language-js"><code>drop table myMember;
+<pre class="language-js"><code>mysql> drop table myMember;
 Query OK, 0 rows affected (0.01 sec)
 </code></pre>
                 </div>
@@ -274,7 +274,7 @@ Query OK, 0 rows affected (0.01 sec)
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블 명 ADD 추가할 필드명 AFTER 필드 위치;
                     </div>
-<pre class="language-js"><code>ALTER TABLE myMember2 ADD youAge int(3) not null comment "회원의 나이" AFTER youBirth;
+<pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD youAge int(3) not null comment "회원의 나이" AFTER youBirth;
     Query OK, 0 rows affected (0.05 sec)
 </code></pre>
 <pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD youPhoneNumber int(11) not null comment "회원의 전화번호" AFTER youAge;
