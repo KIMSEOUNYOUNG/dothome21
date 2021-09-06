@@ -210,16 +210,6 @@ figcaption {
   left: 0;
   top: 0;
 }
-.info.right {
-  left: auto;
-  right: 0px;
-}
-.info.bottom {
-  top: auto;
-  left: auto;
-  bottom: 0;
-  right: 0;
-}
 .info h1 {
   font-weight: 500;
   font-size: 20px;
@@ -232,11 +222,15 @@ figcaption {
   font-weight: 500;
   font-size: 16px;
 }
-.info li {
+.info.right {
+  left: auto;
+  right: 0px;
+}
+.info.right li {
   display: inline;
   list-style: none;
 }
-.info li a {
+.info.right li a {
   display: inline-block;
   text-decoration: none;
   color: #000;
@@ -249,11 +243,17 @@ figcaption {
   font-size: 12px;
   margin-bottom: 5px;
 }
-.info li.active a {
+.info.right li.active a {
   background-color: #fff;
   color: #000;
 }
-.info .bottom-btn {
+.info.bottom {
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+.info.bottom .bottom-btn {
   background: transparent;
   border: 1px solid #000;
   padding: 5px 20px;
@@ -262,8 +262,19 @@ figcaption {
   transition: all 0.4s;
   cursor: pointer;
 }
-.info .bottom-btn:hover {
+.info.bottom .bottom-btn:hover {
   box-shadow: 0 -50px 0 #fff inset;
+}
+.info.bottom .bottom-btn.para {
+  color: #fff;
+  border: 1px solid #fff;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.info.bottom .bottom-btn.para:hover {
+  box-shadow: 0 -50px 0 #000 inset;
 }
 
 @media (max-width: 800px) {

@@ -97,4 +97,5 @@ function modal(){
         document.querySelector("#modal").classList.add("hide");
     });
 }
+modal();
 
