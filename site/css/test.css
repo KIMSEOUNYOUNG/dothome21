@@ -7,9 +7,6 @@ body {
 
 /* testTaye01 */
 
-.testType {
-}
-
 .testType01 {
     font-family: 'NanumSquare';
 }
@@ -58,9 +55,9 @@ body {
 .testType01 #menu > div:hover a {
     color: #19cf60;
 }
-/* .testType01 #menu > div:last-child:hover {
+.testType01 #menu > div:last-child:hover a {
     color: #fff;
-} */
+}
 
 .testType01 #menu > div:nth-child(3) a {
     padding-left: 150px;
