@@ -654,24 +654,6 @@ window.addEventListener("scroll", function(){
                 document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" + i).offsetTop + "px");
             }
         });
-
-        const viewBtn = document.querySelectorAll(".view-title li");
-        const viewCont = document.querySelectorAll(".view-cont > div");
-
-        viewBtn.forEach((element, index) => {
-            element.addEventListener("click", () => {
-                viewBtn.forEach(el => {
-                    el.classList.remove("active");
-                });
-                element.classList.add("active");
-
-                viewCont.forEach(el => {
-                    el.style.display = "none";
-                });
-
-                viewCont[index].style.display = "block";
-            });
-        });
     </script>
 </body>
 </html>
