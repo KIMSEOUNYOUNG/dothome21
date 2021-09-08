@@ -66,7 +66,7 @@ body {
 
 /* banner */
 #banner {
-    background-image: url('/site/img2/bg05.jpg');
+    background-image: url('../img2/bg05.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     left: 0; top: 0;
