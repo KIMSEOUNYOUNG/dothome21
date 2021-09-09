@@ -125,8 +125,16 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         @include content;
         background: rgba(209, 147, 111, 0.6);
         z-index: -1;
+        
+    }
+    &.green {
+        &::before {
+            background: rgb(96, 129, 80, 0.6);
+        }
     }
 }
+
+
 // .bg1 {
 //     height: 100vh;
 //     background-image: url(../img/bg01@2.jpg);
@@ -236,6 +244,11 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         border-bottom: 1px dashed #000;
         display: inline-block;
         margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
     }
     p {
         font-weight: 500;
@@ -269,6 +282,24 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
                 }
             }
         }  
+    }
+    &.left {
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
+    &.list {
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        padding: 20px;
+        font-size: 12px;
+        line-height: 1.8;
+        border-radius: 10px;
+        margin: 20px;
+
+        li {
+            display: block;
+        }
     }
 
     &.bottom {
@@ -708,3 +739,4 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
     }
 }
+
