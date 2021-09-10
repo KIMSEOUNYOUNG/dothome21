@@ -416,6 +416,153 @@ Query OK, 3 rows affected (0.00 sec)
                 </div>
                     <!-- //Intro5 -->
 
+                    <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 Join</h2>
+
+<pre class="language-js"><code>mysql> create table myMember (
+    ->         myMemberID int(10) unsigned auto_increment,
+    ->         youID varchar(15) not null,
+    ->         youName varchar(10) not null,
+    ->         youPass varchar(30) not null,
+    ->         youEmail varchar(30) not null,
+    ->         regTime int(11) not null,
+    ->         PRIMARY KEY (myMemberID)
+    ->     ) charset=utf8;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table myReview(
+    ->         myReviewID int(10) unsigned auto_increment,
+    ->         myMemberID int(10) unsigned,
+    ->         youCont tinytext not null,
+    ->         regTime int(11) not null,
+    ->         PRIMARY KEY (myReviewID)
+    ->     ) charset=utf8;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc mymember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc myreview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('seonyoung0403', '김선영', '1234', 'asdf1234@naver.com', '1005');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('sdfhk341', '박수현', '5678', 'hfak88@naver.com', '1005');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('lidgf87', '김민주', '9101', 'dfdgb67@gmail.com', '1130');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('hahaha', '노희연', '1122', 'vbsdf123@gmail.com', '0518');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('hahaha', '윤수정', '3452', 'lldfh09@naver.com', '1030');
+
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES('2', '배고파요', '0516');
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES('2', '저도요', '0516');
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES('2', '점심 메뉴 추천 받습니다', '0516');
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES('2', '맥날 갈릭버거 맛있어요', '0516');
+
+mysql> select * from mymember;
++------------+---------------+---------+---------+--------------------+---------+
+| myMemberID | youID         | youName | youPass | youEmail           | regTime |
++------------+---------------+---------+---------+--------------------+---------+
+|          1 | seonyoung0403 | 김선영  | 1234    | asdf1234@naver.com |    1005 |
+|          2 | sdfhk341      | 박수현  | 5678    | hfak88@naver.com   |    1005 |
+|          3 | lidgf87       | 김민주  | 9101    | dfdgb67@gmail.com  |    1130 |
+|          4 | hahaha        | 노희연  | 1122    | vbsdf123@gmail.com |     518 |
+|          5 | hahaha        | 윤수정  | 3452    | lldfh09@naver.com  |    1030 |
++------------+---------------+---------+---------+--------------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select * from myreview;
++------------+------------+-------------------------+---------+
+| myReviewID | myMemberID | youCont                 | regTime |
++------------+------------+-------------------------+---------+
+|          1 |          2 | 배고파요                |     516 |
+|          2 |          2 | 저도요                  |     516 |
+|          3 |          2 | 점심 메뉴 추천 받습니다  |     516 |
+|          4 |          2 | 맥날 갈릭버거 맛있어요   |     516 |
++------------+------------+-------------------------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+
+                    <h3 id="intro7-1" class="pt30">Join문 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결할 테이블 명 앨리어스 ON(조건문)
+                    </div>
+                    <h4>두개의 테이블 JOIN 하기</h4>
+<pre class="language-js"><code>mysql> SELECT m.youName, r.youCont, r.regTime FROM mymember m JOIN myreview r ON(m.myMemberID = r.myMemberID);
++---------+-------------------------+---------+
+| youName | youCont                 | regTime |
++---------+-------------------------+---------+
+| 박수현  | 배고파요                |     516 |
+| 박수현  | 저도요                  |     516 |
+| 박수현  | 점심 메뉴 추천 받습니다  |     516 |
+| 박수현  | 맥날 갈릭버거 맛있어요   |     516 |
++---------+-------------------------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+
+                    <h4 class="pt10">필드명을 변경하여 표시하는 방법</h4>
+<pre class="language-js"><code>mysql> SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+-------------------------+------------+
+| youName | youCont                 | reviewTime |
++---------+-------------------------+------------+
+| 박수현  | 배고파요                |        516 |
+| 박수현  | 저도요                  |        516 |
+| 박수현  | 점심 메뉴 추천 받습니다  |        516 |
+| 박수현  | 맥날 갈릭버거 맛있어요   |        516 |
++---------+-------------------------+------------+
+4 rows in set (0.00 sec)
+</code></pre>
+                    <h4 class="pt10">필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>mysql> SELECT m.youName, r.youCont, r.regTime FROM mymember m LEFT JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+-------------------------+---------+
+| youName | youCont                 | regTime |
++---------+-------------------------+---------+
+| 박수현  | 배고파요                |     516 |
+| 박수현  | 저도요                  |     516 |
+| 박수현  | 점심 메뉴 추천 받습니다  |     516 |
+| 박수현  | 맥날 갈릭버거 맛있어요   |     516 |
+| 김선영  | NULL                    |    NULL |
+| 김민주  | NULL                    |    NULL |
+| 노희연  | NULL                    |    NULL |
+| 윤수정  | NULL                    |    NULL |
++---------+-------------------------+---------+
+8 rows in set (0.00 sec)
+</code></pre>
+
+                    <h3 id="intro7-4" class="pt30">데이터베이스 삭제</h3>
+                    <div class="bs-callout bs-callout-info">
+                        drop database 삭제할 데이터베이스 이름;
+                    </div>
+<pre class="language-js"><code>
+</code></pre>
+                </div>
+                    <!-- //Intro7 -->
+
             </div>
             <!-- //col-md-9 -->
             <!-- //col-md-3 -->
@@ -453,6 +600,14 @@ Query OK, 3 rows affected (0.00 sec)
                                 <li><a href="#intro6-2">데이터 불러오기</a></li>
                                 <li><a href="#intro6-3">데이터 수정하기</a></li>
                                 <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro7">테이블 Join</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro7-1">Join문 사용하기</a></li>
+                                <li><a href="#intro7-2">데이터 불러오기</a></li>
+                                <li><a href="#intro7-3">데이터 수정하기</a></li>
+                                <li><a href="#intro7-4">데이터 삭제하기</a></li>
                             </ul>
                         </li>
                     </ul>

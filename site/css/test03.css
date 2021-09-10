@@ -183,3 +183,43 @@ nav ul li a:hover {
 }
 
 /* footer */
+#footer {
+    background: #000;
+    color: #666;
+    padding: 40px 0;
+}
+.footer-logo {
+    font-family: 'GmarketSans';
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.footer-logo span.sec {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.footer-bar {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bar {
+    overflow: hidden;
+}
+.bar.left {
+    float: left;
+}
+.bar.right {
+    float: right;
+}
+.bar li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+}
+.bar li:first-child {
+    margin-left: 0;
+}
