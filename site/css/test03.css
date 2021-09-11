@@ -105,18 +105,18 @@ nav ul li a:hover {
 .item-wrap {
     width: 1203px;
     margin: 44px auto 0;
-
     display: grid;
-    grid-template-columns: repeat(3,374px);
+    grid-template-columns: repeat(3,375px);
     gap:27px;
 }
 .item-box {
     display: inline-block;
     border: 1px solid #eee;
-    border-radius: 5px;
+    border-radius: 6px;
+    width: 375px;
+    position: relative;
 }
 .item-box .item-img {
-    width: 374px;
     height: 361px;
 }
 .item-box .item-detail {
@@ -149,6 +149,11 @@ nav ul li a:hover {
     color: #fff;
     border: 1px solid #05d686;
     background-color: #05d686;
+}
+
+/* cont2 */
+.cont2 {
+    margin: 96px 0 255px;
 }
 
 /* cont3 */
