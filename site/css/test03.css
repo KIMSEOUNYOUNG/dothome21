@@ -110,7 +110,7 @@ nav ul li a:hover {
     gap:27px;
 }
 .item-box {
-    display: inline-block;
+    display: inline;
     border: 1px solid #eee;
     border-radius: 6px;
     width: 375px;
