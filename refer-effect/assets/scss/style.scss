@@ -132,6 +132,11 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
             background: rgb(96, 129, 80, 0.6);
         }
     }
+    &.yellow {
+        &::before {
+            background: rgba(194, 192, 54, 0.6);
+        }
+    }
 }
 
 
