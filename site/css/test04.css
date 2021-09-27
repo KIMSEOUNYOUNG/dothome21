@@ -1,0 +1,430 @@
+/* test04 */
+body {
+    font-family: 'NanumSquare';
+    width: 100%;
+}
+.top {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    position: relative;
+}
+.top .top-wrap {
+    display: flex;
+    justify-content: space-between;
+    line-height: 90px;
+}
+.top .top-logo {
+    width: 150px;
+    height: 40px;
+    margin-left: 100px;
+    display: inline-block;
+}
+.top .top-wrap .top-menu {
+    margin-right: 170px;
+}
+.top .top-wrap .top-menu a {
+    color: #2d1d1d;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 80px;
+    text-align: center;
+}
+.top .top-wrap .download {
+    color: #15c5aa;
+    border: 1px solid #15c5aa;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-right: 100px;
+}
+.menu-wrap {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+.menu-wrap a {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    max-width: 330px;
+    height: 70px;
+    line-height: 70px;
+    color: #838383;
+    font-size: 18px;
+}
+.menu-wrap a.green {
+    color: #05d6b4;
+}
+.main {
+    background-image: url(../naverWhale/banner01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 670px;
+    position: relative;
+    color: #fff;
+}
+.main .text {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 300px;
+}
+.main h2 {
+    display: block;
+    font-size: 50px;
+    line-height: 1.2em;
+}
+.main p {
+    font-size: 30px;
+    padding: 30px 0 50px;
+}
+.main a {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    position: relative;
+    background: #05d6b4;
+}
+.main .text img {
+    width: 30px;
+    height: 30px;
+}
+.contents {
+    background-color: #ecedf1;
+    width: 100%;
+    height: 670px;
+    display: block;
+}
+.contents .c1 {
+    display: flex;
+    justify-content: center;
+}
+.c1 .c1-wrap {
+    margin-top: 165px;
+    display: flex;
+}
+.c1 .text img {
+    width: 70px;
+    height: 70px;
+}
+.c1 .title {
+    display: flex;
+    width: 640px;
+}
+.c1 h2 {
+    font-size: 50px;
+    margin-left: 10px;
+}
+.c1 h3 {
+    color: #333130;
+    font-size: 26px;
+    margin: 30px 0 50px;
+}
+.c1 .p {
+    display: flex;
+    margin-bottom: 30px;
+}
+.c1 .p img {
+    width: 20px;
+    height: 20px;
+}
+.c1 p {
+    display: inline-block;
+    color: #2d68d2;
+    line-height: 20px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.c1 .p2 {
+    display: inline-block;
+    color: #2d68d2;
+    line-height: 20px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.c1 .img {
+    width: 640px;
+    height: 327px;
+    display: inline-block;
+}
+.c1 .icon img {
+    width: 118px;
+    height: 55px;
+}
+.c2 {
+    margin-top: 165px;
+    height: 670px;
+    margin-left: 65px;
+}
+.c2 .text {
+    margin-left: 64px;
+}
+.c3 {
+    background-color: #ecedf1;
+    width: 100%;
+    height: 670px;
+}
+.c4 {
+    height: 670px;
+    margin-left: 65px;
+}
+.c4 .text {
+    margin-left: 64px;
+}
+.c5 {
+    background-color: #ecedf1;
+    width: 100%;
+    height: 670px;
+}
+.Footer {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 190px 0;
+    margin: 0 auto;
+}
+.Footer .logo-img {
+    width: 560px;
+    height: 104px;
+    margin-bottom: 3%;
+    display: block;
+    margin-left: 36%;
+}
+.Footer a {
+    display: inline-block;
+    width: 250px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    position: relative;
+    background: #05d6b4;
+}
+.Footer .text a {
+    font-size: 16px;
+    color: #c0c0c0;
+    font-weight: 300;
+}
+.Footer img {
+    width: 30px;
+    height: 30px;
+}
+.Footer2 {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.Footer2 .logo img {
+    width: 141px;
+    height: 19px;
+    margin-bottom: 24px;
+}
+.Footer2 .text {
+    display: flex;
+    margin-left: 25%;
+}
+.Footer2 .text-wrap a {
+    font-size: 16px;
+    color: #c0c0c0;
+    font-weight: 400;
+    margin-right: 30px;
+}
+.Footer2 .text .beta {
+    margin-left: 80px;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: -10px;
+}
+.Footer2 .text .beta a {
+    font-size: 16px;
+    color: #c0c0c0;
+}
+.Footer2 .text .beta img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 840px){
+    .Top {
+        width: 100%;
+        height: 60px;
+    }
+    .top .top-logo {
+        width: 140px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: -10px;
+    }
+    .top-menu, .top-download {
+        display: none;
+    }
+    .top-wrap .menu-btn span {
+        width: 28px;
+        height: 2px;
+        background-color: #333;
+        display: block;
+        position: relative;
+        top: 50%;
+        margin: 0 auto;
+        margin-top: 7px;
+        margin-right: 15px;
+    }
+    .Main {
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 600px;
+    }
+    .main {
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png) ;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100%;
+    }
+    .main .text h2 {
+        font-size: 40px;
+        margin-left: -260px;
+        margin-top: -100px;
+    }
+    .main .text p { 
+        font-size: 18px;
+        margin-left: -260px;
+        margin-top: -10px;
+    }
+    .main a {
+        width: 200px;
+        font-size: 24px;
+        border-radius: 32px;
+        height: 64px;
+        line-height: 64px;
+        margin-left: -260px;
+    }
+    .main .text img {
+        width: 20px;
+        height: 20px;
+    }
+    .contents {
+        height: 730px;
+    }
+    .c1 .c1-wrap {
+        margin-top: 70px;
+        display: block;
+    }
+    .c1 h2 {
+        font-size: 32px;
+        margin-left: 10px;
+    }
+    .c1 .text img {
+        width: 50px;
+        height: 50px;
+    }
+    .c1 h3 {
+        font-size: 18px;
+        margin: 25px 0 40px;
+    }
+    .c1 .p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .c1 .p img {
+        width: 16px;
+        height: 16px;
+    }
+    .c1 .icon img {
+        width: 90px;
+        height: 40px;
+    }
+    .c1 .img {
+        width: 542px;
+        height: 277px;
+        display: inline-block;
+        margin-top: 50px;
+        margin-left: 60px;
+    }
+    .c2 {
+        height: 790px;
+        margin-top: 50px;
+    }
+    .c2 .text {
+        margin-left: -50px;
+        margin-top: 30px;
+        position: relative;
+    }
+    .c2 .img {
+        margin-left: 0px;
+        margin-top: 360px;
+        position: absolute;
+    }
+    .c3 {
+        height: 750px;
+    }
+    .c4 {
+        height: 790px;
+        margin-top: -30px;
+    }
+    .c4 .text {
+        margin-left: -50px;
+        margin-top: 30px;
+        position: relative;
+    }
+    .c4 .img {
+        margin-left: 0px;
+        margin-top: 360px;
+        position: absolute;
+    }
+    .c5 {
+        height: 710px;
+    }
+    .Footer .logo-img {
+        width: 300px;
+        height: 59px;
+        margin-bottom: 18px;
+        margin-left: 30%;
+    }
+    .Footer a {
+        width: 200px;
+        font-size: 24px;
+        color: #fff;
+        border-radius: 32px;
+        height: 64px;
+        line-height: 64px;
+    }
+    .Footer img {
+        width: 20px;
+        height: 20px;
+    }
+    .Footer2 .text {
+        display: block;
+        margin-left: 10px;
+    }
+    .Footer2 .text-wrap a {
+        font-size: 16px;
+        margin-left: 30px;
+        line-height: 2.5;
+    }
+    .Footer2 .text .beta {
+        width: 148px;
+        margin-top: 20px;
+        margin-left: 40%;
+        padding: 8px 0;
+    }
+}
