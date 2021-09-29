@@ -14,18 +14,68 @@
     <style>
         .paraNav {
             top: 20px;
-            transition: top 0.6s ease;
+            transition: top 0.4s ease;
         }
         .paraNav.hide {
             top: -200px;
         }
         .paraNav li a {
             width: auto;
-            padding: 5px 20px;
+            padding: 5px;
+            width: 30px; height: 30px;
         }
         .paraNav li.active a {
             border-radius: 30px;
         }
+
+        /* 한번에 나타나기 */
+        /* .content-item {
+            opacity: 0;
+            transition: all 1s;
+        }
+        .content-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+
+        /* 개별적으로 나타나기  !important;우선순위 : 스크립트 스타일 그다음 스타일,, 그다음링크..*/  
+        .content-item .num {
+            opacity: 0 !important;
+            transform: translateY(200px);
+            transition: all 1s .1s ease-in;
+        }
+        .content-item .title {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 1s .3s ease-in;
+        }
+        .content-item .img-wrap {
+            opacity: 0;
+            transform: translateY(200px) rotate(30deg);
+            transition: all 1s .6s ease-in;
+        }
+        .content-item .desc {
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: all 1s .9s ease-in;
+        }
+        .content-item.show .num {
+            opacity: 0.07 !important;
+            transform: translateY(0);
+        }
+        .content-item.show .title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .content-item.show .img-wrap {
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+        }
+        .content-item.show .desc {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
     </style>
 </head>
 <body class="parallax">
@@ -33,7 +83,7 @@
     <!-- header -->
     <header class="paraInfo">
         <h1><a href="index.html">Parallax Effect03 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 숨김메뉴2</p>
+        <p>패랠랙스 스크로링 효과 - 나타나기</p>
     </header>
     <!-- //header -->
 ​
@@ -173,8 +223,8 @@
                     <li><a href="jqueryPE01.html">1</a></li>
                     <li><a href="jqueryPE02.html">2</a></li>
                     <li><a href="jqueryPE03.html">3</a></li>
-                    <li class="active"><a href="jqueryPE04.html">4</a></li>
-                    <li><a href="jqueryPE05.html">5</a></li>
+                    <li><a href="jqueryPE04.html">4</a></li>
+                    <li class="active"><a href="jqueryPE05.html">5</a></li>
                     <li><a href="jqueryPE06.html">5</a></li>
                     <li><a href="jqueryPE07.html">5</a></li>
                     <li><a href="jqueryPE08.html">5</a></li>
@@ -232,74 +282,7 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        $(".paraNav ul li").click(function(e){
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
-            $("html, body").animate({scrollTop : offset}, 800, "easeInOutCirc");
-        });
 
-        // $(window).scroll(function(){
-        //     let scrollTop = $(this).scrollTop();
-        //     let lastScrollTop = 0;
-
-        //     if( scrollTop > lastScrollTop ){
-        //         $(".paraNav").addClass("hide");
-        //     } else {
-        //         $(".paraNav").removeClass("hide");
-        //     }
-
-        //     lastScrollTop = scrollTop;
-
-        //     console.log("scrollTop: " + paraNav)
-        //     console.log("lastScrollTop: " + lastScrollTop)
-        // });
-
-        let nowScrollTop;
-        let lastScrollTop = 0;
-
-        $(window).scroll(function(){
-            nowScrollTop = true;
-
-            setInterval(()=>{
-                if( nowScrollTop ){
-                    nowScrollTop = false;
-                    hasScroll();
-                }
-            }, 1000);
-        });
-
-        function hasScroll(){
-            let scrollTop = $(this).scrollTop();
-
-            if( scrollTop > lastScrollTop ){
-                $(".paraNav").addClass("hide");
-            } else {
-                $(".paraNav").removeClass("hide");
-            }
-
-            lastScrollTop = scrollTop;
-
-            // console.log("scrollTop: " + scrollTop)
-            // console.log("lastScrollTop: " + lastScrollTop)
-        }
-
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
-
-            //버튼용
-            $(".content-item").each(function(index, elemnet){
-                if( scrollTop >= $(this).offset().top - 2){
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
-
-
-            //출력문
-            $(".paraScroll span").text(scrollTop);
-        });
     </script>
 </body>
 </html>
