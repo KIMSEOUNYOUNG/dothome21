@@ -29,51 +29,33 @@
         }
 
         /* 한번에 나타나기 */
-        /* .content-item {
+        /* .content-item .desc {
             opacity: 0;
-            transition: all 1s;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
         }
-        .content-item.show {
+        .content-item .desc.show {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) skewX(0);
         } */
 
-        /* 개별적으로 나타나기  !important;우선순위 : 스크립트 스타일 그다음 스타일,, 그다음링크..*/  
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s .1s ease-in;
-        }
-        .content-item .title {
+        /* 한글짜씩 나타나기 */
+        /* .content-item .desc span {
             opacity: 0;
-            transform: translateX(-100px);
-            transition: all 1s .3s ease-in;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
         }
-        .content-item .img-wrap {
+        .content-item .desc span.show{
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        } */
+
+        /* GSAP 한 글자씩 나타나기 */
+        .content-item .desc span {
             opacity: 0;
-            transform: translateY(200px) rotate(30deg);
-            transition: all 1s .6s ease-in;
-        }
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s .9s ease-in;
-        }
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-        }
-        .content-item.show .title {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .content-item.show .img-wrap {
-            opacity: 1;
-            transform: translateY(0) rotate(0);
-        }
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) rotate(90deg) scale(2);
         }
 
     </style>
@@ -82,8 +64,8 @@
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect03 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 이질감</p>
+        <h1><a href="index.html">Parallax Effect07 - jQuery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 텍스트 효과</p>
     </header>
     <!-- //header -->
 ​
@@ -95,15 +77,15 @@
 
         <nav class="paraNav">
             <ul>
-                <li class="active"><a href="#section1">메뉴1</a></li>
-                <li><a href="#section2">메뉴2</a></li>
-                <li><a href="#section3">메뉴3</a></li>
-                <li><a href="#section4">메뉴4</a></li>
-                <li><a href="#section5">메뉴5</a></li>
-                <li><a href="#section6">메뉴6</a></li>
-                <li><a href="#section7">메뉴7</a></li>
-                <li><a href="#section8">메뉴8</a></li>
-                <li><a href="#section9">메뉴9</a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </nav>
         <div class="paraCont">
@@ -212,9 +194,9 @@
                     <li><a href="javascriptPE03.html">3</a></li>
                     <li><a href="javascriptPE04.html">4</a></li>
                     <li><a href="javascriptPE05.html">5</a></li>
-                    <li><a href="javascriptPE06.html">5</a></li>
-                    <li><a href="javascriptPE07.html">5</a></li>
-                    <li><a href="javascriptPE08.html">5</a></li>
+                    <li><a href="javascriptPE06.html">6</a></li>
+                    <li><a href="javascriptPE07.html">7</a></li>
+                    <li><a href="javascriptPE08.html">8</a></li>
                 </ul>
             </div>
             <div class="footerInfo">
@@ -225,9 +207,9 @@
                     <li><a href="jqueryPE03.html">3</a></li>
                     <li><a href="jqueryPE04.html">4</a></li>
                     <li><a href="jqueryPE05.html">5</a></li>
-                    <li><a href="jqueryPE06.html">5</a></li>
-                    <li class="active"><a href="jqueryPE07.html">5</a></li>
-                    <li><a href="jqueryPE08.html">5</a></li>
+                    <li><a href="jqueryPE06.html">6</a></li>
+                    <li class="active"><a href="jqueryPE07.html">7</a></li>
+                    <li><a href="jqueryPE08.html">8</a></li>
                 </ul>
             </div>
         </footer>
@@ -279,9 +261,82 @@
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        //글씨 쪼개기
+        // let text = $("#section1 .desc").text();
+        // let split = text.split('').join("</span><span>");
+        // split = "<span>" + split + "</span>";
+        // $("#section1 .desc").html(split);
+        
+        //글씨 쪼개기(여러개)
+        $(".content-item .desc").each(function(){
+            let text = $(this).text();
+            let split = text.split('').join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label", text);
+        });
+
+        $(window).scroll(function(){
+            // if($(window).scrollTop()>$("#section1").offset.top){
+            //     $("#section1 .desc1").addClass("show");
+            // } else {
+            //     $("#section1 .desc1").removeClass("show");
+            // }
+
+            //each()
+            //전체
+            // $(".content-item .desc").each(function(){
+            //     if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/2 ){
+            //         $(this).addClass("show");
+            //     } else {
+            //         $(this).removeClass("show");
+            //     }
+            // });
+
+            //한글짜씩
+            // for문
+            // for(let i=1;i<=$(".content-item").length;i++){
+            //     if( $(window).scrollTop() >= $("#section" + i).offset().top){
+            //         $("#section" + i + ".desc span").each(i=>{
+            //             setTimeout(()=>{
+            //                 $("#section" + i + ".desc span").eq(i).addClass("show");
+            //             }, 50 * i);
+            //         });
+            //     }
+            // }
+
+            //each()
+            // $('.content-item').each(function(index){
+            //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+            //         $(this).find('.desc span').each(i => {
+            //             setTimeout(()=>{
+            //                 $(this).find('.desc span').eq(i).addClass('show');
+            //             },50 * i);
+            //         });
+            //     }
+            // });
+
+            //gsap
+            $(".content-item").each(function(index){
+                if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/2 ){
+                    gsap.to( $(this).find(".desc span"), {
+                        druation: .5,
+                        opacity: 1,
+                        stagger: .05,
+                        y: 0,
+                        ease: "power2.out",
+                        rotation: 0,
+                        scale: 1
+                    });
+
+                    //메뉴
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
+        });
 
     </script>
 </body>
