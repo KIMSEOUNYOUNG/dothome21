@@ -1,0 +1,121 @@
+body {
+    font-family: 'NanumSquare';
+}
+
+
+/* container */
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* header */
+header {
+    overflow: hidden;
+    padding: 60px 0 35px;
+}
+header img {
+    width: 93px;
+    height: 64px;
+    float: left;
+}
+header nav {
+    height: 110px;
+    float: right;
+}
+header nav ul {
+}
+header nav ul li{
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 50px;
+}
+header nav ul li a {
+   
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* content */
+.banner img {
+    width: 960px;
+    height: 360px;
+    margin-bottom: 20px;
+}
+.center {
+    overflow: hidden;
+}
+.centerLeft img{
+    float: left;
+    width: 470px;
+    height: 210px;
+    margin-right: 20px;
+}
+.centerRight {
+    float: left;
+}
+.centerRight {
+    width: 470px;
+    height: 210px;
+}
+
+article {
+    margin-bottom: 50px;
+    display: inline-block;
+}
+article p {
+    font-size: 16px;
+    color: #050505;
+    font-weight: 500;
+}
+article h3 {
+    font-size: 17px;
+    font-weight: b;
+    margin: 40px 0 20px;
+}
+.imgBox {
+    overflow: hidden;
+}
+.imgBox > div {
+    float: left;
+    margin-left: 17px;
+}
+.imgBox > div:first-child {
+    margin-left: 0;
+}
+.imgBox .box1 img {
+    width: 227px;
+    height: 227px;
+}
+.imgBox .box2 img {
+    width: 227px;
+    height: 227px;
+}
+.imgBox .box3 img {
+    width: 227px;
+    height: 227px;
+}
+.imgBox .box4 img {
+    width: 227px;
+    height: 227px;
+}
+
+footer {
+    border-top: 1px solid #dcdcdc;
+    display: inline-block;
+    width: 100%;
+}
+footer P {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #8a8a8a;
+    margin-bottom: 20px;
+}
+footer strong {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    margin-bottom: 50px;
+}
