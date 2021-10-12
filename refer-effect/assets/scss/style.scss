@@ -137,6 +137,11 @@ $gradient6: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
             background: rgba(194, 192, 54, 0.6);
         }
     }
+    &.blue {
+        &::before {
+            background: rgba(46, 70, 180, 0.6);
+        }
+    }
 }
 
 
