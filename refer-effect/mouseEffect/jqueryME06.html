@@ -163,14 +163,13 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        let width = $(".cursor").width()/2
-        let height = $(".cursor").height()/2
+        let width = $(".cursor").width()/2;
+        let height = $(".cursor").height()/2;
         
         // 마우스
         $(window).mousemove(function(e){
-            gsap.to(".cursor", {duration: 0.5, left: e.pageX - width, top: e.pageY -  height});
+            gsap.to(".cursor", {duration: 0.5, left: e.pageX - width, top: e.pageY - height});
         });
-        
     </script>
 </body>
 
