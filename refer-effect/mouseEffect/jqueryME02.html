@@ -104,11 +104,14 @@
 
     <div class="info right">
         <ul>
-            <li><a href="javscriptME01.html">1</a></li>
-            <li><a href="javscriptME02.html">2</a></li>
-            <li><a href="javscriptME03.html">3</a></li>
-            <li><a href="javscriptME04.html">4</a></li>
-            <li><a href="javscriptME05.html#">5</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
+            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -116,6 +119,9 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
 
@@ -152,15 +158,90 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;Big jobs usually go to the men who prove their ability to autgrow &lt;em&gt;small ones&lt;/em&gt;.&lt;/p&gt;
+        &lt;h2&gt;작은 일에서 &lt;em&gt;성장&lt;/em&gt;할 수 있는 사람에게 큰 일이 주어진다.&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'NEXONLv2Gothic';
+    cursor: none;
+}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed rgb(255, 235, 57);
+    color: rgb(255, 235, 57);
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: rgba(243, 243, 243, 0.2);
+    user-select: none;
+    pointer-events: none;
+    transition: transform .3s, opacity .2s;
+}
+.cursor.active {
+    opacity: .5;
+    transform: scale(0);
+}
+.cursor.show {
+    opacity: .5;
+    transform: scale(1);
+    background: rgb(37, 71, 165);
+}
+.cursor-follower {
+    position: absolute;
+    width: 30px; height: 30px;
+    background: rgba(243, 243, 243, 0.5);
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+    transition: transform .6s ease-in-out, opacity .2s ease-in-out;
+}
+.cursor-follower.active {
+    transform: scale(5);
+    background: rgba(255, 235, 57, 0.6);
+}
+.cursor-follower.show {
+    transform: scale(5);
+    background: rgba(57, 110, 255, 0.6);
+}
+.info, .info a {
+    cursor: none;
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript"> const cursor = $(".cursor");
+<pre><code class="language-javascript">const cursor = $(".cursor");
 const follower = $(".cursor-follower");
 
 //움직임 효과

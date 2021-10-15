@@ -256,7 +256,7 @@ footer .footer-wrap .footer-right .first-wrap .no3:after {
 footer .footer-wrap .footer-right .second-wrap{
     color: #797979;
     margin-bottom: 10px;
-    font-size: 13px
+    font-size: 13px;
 }
 footer .footer-wrap .footer-right .second-wrap span {
     position: relative;
@@ -274,7 +274,7 @@ footer .footer-wrap .footer-right .second-wrap span:first-child::after {
 footer .footer-wrap .footer-right .third-wrap{
     color: #797979;
     margin-bottom: 10px;
-    font-size: 13px
+    font-size: 13px;
 }
 footer .footer-wrap .footer-right .third-wrap span {
     position: relative;
@@ -291,7 +291,7 @@ footer .footer-wrap .footer-right .third-wrap span:first-child::after {
 }
 footer .footer-wrap .footer-right .fourth-wrap{
     color: #797979;
-    font-size: 13px
+    font-size: 13px;
 }
 footer .footer-wrap .footer-right .fourth-wrap span {
     position: relative;

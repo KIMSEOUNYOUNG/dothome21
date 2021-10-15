@@ -96,12 +96,15 @@
     </div>
 
     <div class="info right">
-        <ul>
-            <li><a href="javscriptME01.html">1</a></li>
-            <li><a href="javscriptME02.html">2</a></li>
-            <li><a href="javscriptME03.html">3</a></li>
-            <li><a href="javscriptME04.html">4</a></li>
-            <li><a href="javscriptME05.html#">5</a></li>
+        <ul> 
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
+            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -109,6 +112,9 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li class="active"><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
 
@@ -151,15 +157,127 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;div class="moveWrap"&gt;
+        &lt;article class="moveImg"&gt;
+            &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지"&gt;&lt;/div&gt;
+            &lt;div class="mText"&gt;
+                &lt;p&gt;Big jobs usually go to the men who prove their ability to autgrow small ones&lt;/p&gt;
+                &lt;p&gt;작은 일에서 성장할 수 있는 사람에게 큰 일이 주어진다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.moveImg {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all .2s;
+}
+.moveImg .mImg {
+    width: 50vw;
+    position: relative;
+}
+.moveImg .mImg::before {
+    content: '';
+    position: absolute;
+    left: 5%; bottom: -3%;
+    width: 90%; height: 40px;
+    background: url(../assets/img/bg9.jpg);
+    background-size: 100% 30px;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
+}
+.moveImg .mImg img {
+    width: 100%;
+    border-radius: 5px;
+}
+.moveImg .mText {
+    font-family: 'NEXONLv1Gothic';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate3d(-50%, -50%, 150px);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .3);
+    padding: 2vw;
+    font-size: 1vw;
+    line-height: 1.6;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+.cursor {
+    position: absolute;
+    width: 10px; height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+    user-select: none;
+    pointer-events: none;
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(window).mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //기준점을 가운데로 변경
+    let standardX = $(window).width()/2 - pageX;
+    let standardY = $(window).height()/2 - pageY;
+    
+    //최댓값, 최솟값 설정
+    // if(standardX >= 50) standardX = 50;
+    // if(standardX <= -50) standardX = -50;
+    // if(standardY >= 50) standardY = 50;
+    // if(standardY <= -50) standardY = -50;
+
+    //최솟값 -100 최댓값 100 설정
+    let maxX = Math.max(-100, Math.min(100, standardX));
+    let maxY = Math.max(-100, Math.min(100, standardY));
+
+    //각도를 줄이는 설정
+    let angleX = maxX * 0.12;
+    let angleY = maxY * 0.12;
+
+    //부드럽게 설정
+    let softX = 0;
+    let softY = 0;
+
+    softX += (angleX - softX) * 0.7;
+    softY += (angleY - softY) * 0.7;
+
+    //이미지
+    $(".moveImg").css({"transform" : "translate(-50%, -50%) perspective(600px) rotateX("+ softY+"deg) rotateY("+-softX+"deg)"});
+    
+    //커서
+    gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+    //출력
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+    $(".maxX").text(maxX);
+    $(".maxY").text(maxY);
+    $(".angleX").text(parseInt(angleX));
+    $(".angleY").text(parseInt(angleY));
+});
 </code></pre>
                         </div>
                     </div>

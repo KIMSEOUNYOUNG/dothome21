@@ -89,7 +89,10 @@
             <li><a href="javascriptME02.html">2</a></li>
             <li class="active"><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
-            <li><a href="javascriptME05.html#">5</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
+            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -97,6 +100,9 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
 
@@ -141,20 +147,109 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">jquery</a></li>
+                            <li><a href="#">javascript</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;Shallow men believe in luck, Strong men believe in &lt;em&gt;cause and effect&lt;/em&gt;.&lt;/p&gt;
+        &lt;h2&gt;얕은 사람은 행운을 믿으며, 강한 사람은 &lt;em&gt;원인과 결과&lt;/em&gt;를 믿는다.&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'NEXONLv2Gothic';
+    cursor: none;
+}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed rgb(255, 235, 57);
+    color: rgb(255, 235, 57);
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: transform .3s;
+}
+.cursor.active {
+    transform: scale(20);
+    mix-blend-mode: difference;
+}
+.info.left.list li.active {
+    text-decoration: underline;
+    color: rgb(255, 235, 57);
+}
+.info, .info a {
+    cursor: none;
+}
 </code></pre>
                         </div>
-                        <div class="jquery">
-<pre><code class="language-javascript">
+                        <div class="javascript">
+<pre><code class="language-javascript">    const w = document.querySelector(".cursor").offsetWidth / 2;
+    const h = document.querySelector(".cursor").offsetHeight / 2;
+    
+    //움직임 효과
+    document.addEventListener("mousemove", e => {
+        gsap.to(".cursor", {duration: 0.3, left: e.pageX - w, top: e.pageY - h});
+    });
+
+    //오버 효과
+    const cursor = document.querySelector(".cursor");
+    
+    document.querySelectorAll(".mouseCont em").forEach(em =>{
+        em.addEventListener("mouseenter", ()=>{
+            cursor.classList.add("active");
+        });
+        em.addEventListener("mouseleave", ()=>{
+            cursor.classList.remove("active");
+        });
+    });
+
+    //출력용
+    const li = document.querySelectorAll(".info.left.list li");
+
+    li.forEach(element => {
+        element.addEventListener("click", function(){
+
+            li.forEach(el => {
+                el.classList.remove("active");
+            });
+            element.classList.add("active");
+
+            cursor.style.cssText = "mix-blend-mode: " +  element.innerText;
+        });
+    });
 </code></pre>
                         </div>
                     </div>
