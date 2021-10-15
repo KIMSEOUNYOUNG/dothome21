@@ -130,15 +130,85 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img"&gt;
+            &lt;div class="slider-inner"&gt;
+                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg1@2.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg2@2.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg3@2.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg4@2.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg5@2.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">/* slider */
+    .slider-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .slider-img img {
+        width: 100%;
+    }
+
+    .slider-img {
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 480px;
+        overflow: hidden;
+    }
+    .slider-inner {
+        position: relative;
+        width: 4800px;
+        height: 480px;
+        overflow: hidden;
+    }
+    .slider {
+        float: left;
+        width: 800px;
+        height: 480px;
+        position: relative;
+    }
+    .slider::before {
+        content: attr(data-name);
+        position: absolute;
+        left: 0px; top: 0px;
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        padding: 5px 10px 3px;
+        font-family: 'NEXONLv1Gothic';
+    }
+    .slider:nth-child(1) {z-index: 5;}
+    .slider:nth-child(2) {z-index: 4;}
+    .slider:nth-child(3) {z-index: 3;}
+    .slider:nth-child(4) {z-index: 2;}
+    .slider:nth-child(5) {z-index: 1;}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const sliderInner = $(".slider-inner");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderWidth = slider.width();
+
+//콜백함수 재귀함수
+setInterval(function(){
+    sliderInner.animate({left:-sliderWidth}, 400, function(){
+        $(".slider:first-child").appendTo(sliderInner);
+        sliderInner.css("left","");
+    });
+}, 3000);
 </code></pre>
                         </div>
                     </div>
@@ -156,21 +226,21 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        // const sliderWrap = $(".slider-wrap");
-        // const sliderImg = $(".slider-img");
-        // const sliderInner = $(".slider-inner");
-        // const slider = $(".slider");
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
 
-        // let currentIndex = 0;
-        // let sliderWidth = slider.width();
+        let currentIndex = 0;
+        let sliderWidth = slider.width();
 
         //콜백함수 재귀함수
-        // setInterval(function(){
-        //     sliderInner.animate({left:-sliderWidth}, 400, function(){
-        //         $(".slider:first-child").appendTo(sliderInner);
-        //         sliderInner.css("left","");
-        //     });
-        // }, 3000);
+        setInterval(function(){
+            sliderInner.animate({left:-sliderWidth}, 400, function(){
+                $(".slider:first-child").appendTo(sliderInner);
+                sliderInner.css("left","");
+            });
+        }, 3000);
     </script>
 </body>
 </html>
