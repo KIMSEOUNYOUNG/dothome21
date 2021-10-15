@@ -152,9 +152,10 @@ body {
     float: left;
     margin-left: 23px;
 }
-#section02 .product:nth-child(1) {
-    margin-left: none;
+#section02 .product.first {
+    margin-left: 0;
 }
+
 #section02 .product .proImg {
     position: relative;
     width: 310px; height: 309px;
@@ -186,7 +187,7 @@ body {
 }
 #section02 .product div .icon05 {
     position: absolute;
-    right: 0; bottom: 1px;
+    right: 0; bottom: 3px;
     width: 35px; height: 35px;
 }
 
@@ -270,6 +271,7 @@ footer .footer-wrap .footer-right .second-wrap span:first-child::after {
     background-color:#797979;
 }
 footer .footer-wrap .footer-right .third-wrap{
+    width: 300px;
     color: #797979;
     margin-bottom: 10px;
 }
