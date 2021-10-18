@@ -1,0 +1,91 @@
+// #mainCont
+// #aboutCont
+// #referCont
+// #scriptCont
+// #portCont
+// #mainCont
+
+// #mainCont
+#mainCont {
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family: $font-main;
+    font-size: 9vw;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    br {
+        display: none;
+    }
+}
+@media (max-width: 800px){
+    #mainCont {
+        font-size: 15vw;
+
+        br {
+            display: block;
+        }
+    }
+}
+
+// #main02
+#mainCont02 {
+    background: url(../img/bg01.jpg) ;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: $font-main;
+    font-size: 7vw;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(23, 47, 42, 0.7);
+        // z-index: -1;
+    }
+
+    .main__cont {
+        padding: 0.7em;
+        background: #000;
+        z-index: 900;
+        border-radius: 10px;
+
+        div {
+            position: relative;
+            background: url(../img/bg02.jpg) center center;
+            background-attachment: fixed;
+            background-size: cover;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            br {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    #mainCont02 {
+        font-size: 14vw;
+        padding: 0.2em;
+
+        div {
+            br {
+                display: block;
+            }
+        }
+    }
+}
