@@ -89,3 +89,249 @@
         }
     }
 }
+
+// about page
+body {
+    background: #f0eeeb;
+    .section1 {
+        font-family: $font-main;
+        margin-top: 200px;
+        font-size: 7vw;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 270px;
+    }
+    @media (max-width: 1190px){
+        .section1 {
+            font-size: 9vw;
+        }
+    }
+    @media (max-width: 800px){
+        .section1 {
+            font-size: 12vw;
+        }
+    }
+    .section2{
+        .about01 {
+            font-family: $font-kor1;
+            margin-bottom: 310px;
+            img {
+                height: 588px;
+                margin-bottom: 60px;
+            }
+            h3 {
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+            p {
+                text-align: justify;
+                width: 73%;
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: 1190px){
+        .section2 {
+            .about01 {
+                margin-bottom: 280px;
+
+                h3,
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .section3 {
+        .about02 {
+            font-family: $font-kor1;
+            margin-bottom: 310px;
+            overflow: hidden;
+
+            img {
+                width: 842px;
+                height: 1118px;
+                float: left;
+                margin-right: 47px;
+            }
+            h3 {
+                float: left;
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+            p {
+                text-align: justify;
+                float: left;
+                width: 25%;
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: 1190px){
+        .section3 {
+            .about02 {
+                margin-bottom: 280px;
+
+                img {
+                    width: 600px;
+                    height: 800px;
+                    margin-right: 47px;
+                }
+                h3,
+                p {
+                    width: 35%;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media (max-width: 800px){
+        .section3 {
+            .about02 {
+                margin-bottom: 280px;
+
+                img {
+                    width: 800px;
+                    height: 1220px;
+                    float: none;
+                }
+                h3 {
+                    text-align: right;
+                    float: right;
+                    margin-top: 20px;
+                }
+                p {
+                    width: 35%;
+                    font-size: 16px;
+                    width: 70%;
+                    float: right;
+                }
+            }
+        }
+    }
+
+    .section4 {
+        .about03 {
+            font-family: $font-kor1;
+            margin-bottom: 310px;
+            overflow: hidden;
+
+            .aboutImg01 {
+                display: none;
+            }
+            div {
+                float: left;
+                font-size: 18px;
+                margin-right: 47px;
+                width: 34%;
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                }
+                p {
+                    text-align: justify;
+                }
+            }
+            .aboutImg02 {
+                width: 734px;
+                height: 484px;
+                float: right;
+            }
+        }
+    }
+    @media (max-width: 1190px){
+        .section4 {
+            .about03 {
+                margin-bottom: 280px;
+
+                div {
+                    float: left;
+                    font-size: 16px;
+                    margin-right: 45px;
+                    width: 36%;
+    
+                    h3 {
+                        font-size: 16px;
+                        margin-bottom: 25px;
+                    }
+                    p {
+                        text-align: justify;
+                    }
+                }
+                img {
+                    width: 594px;
+                    height: 380px;
+                    float: right;
+                }
+            }
+        }
+    }
+    @media (max-width: 800px){
+        .section4 {
+            .about03 {
+                margin-bottom: 280px;
+
+                .aboutImg01 {
+                    display: block;
+                    width: 800px;
+                    height: 613px;
+                    float: none;
+                }
+                div {
+                    width: 70%;
+                    h3 {
+                        float: none;
+                        margin-top: 20px;
+                        
+                    }
+                    p {
+                        font-size: 16px;
+                        width: 70%;
+                        float: none;
+                    }
+                }
+                .aboutImg02 {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .section5 {
+        background: #000;
+        color: #fff;
+        padding: 260px 0 340px;
+        position: relative;
+
+        div {
+            text-align: center;
+
+            &:nth-child(1) {
+                font-size: 20px;
+                font-weight: lighter;
+                margin-bottom: 60px;
+
+            }
+            &:nth-child(2) {
+                font-family: $font-main;
+                font-size: 7vw;
+                line-height: 1;
+                margin-bottom: 75px;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: inline-block;
+                font-size: 20px;
+                font-weight: lighter;
+                border: 1px solid #fff;
+                box-sizing: border-box;
+                border-radius: 50px;
+                padding: 20px 70px;
+            }
+        }
+    }
+}
