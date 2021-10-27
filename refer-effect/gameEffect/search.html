@@ -227,7 +227,7 @@
               $msg = $(".msg"),
               $reStart = $(".again-btn"); 
 
-        let timeRemain = 10,        //남은 시간 설정
+        let timeRemain = 60,        //남은 시간 설정
             score = 0,              //점수 설정
             timeInterval;
 
@@ -358,7 +358,7 @@
 
         //다시 도전하기
         function reStart(){
-            timeRemain = 10;
+            timeRemain = 60;
             $msg.hide();
             score = 0;
             $scoreCount.text(0);
