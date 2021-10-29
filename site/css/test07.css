@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* container */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    /* background: rgb(197, 177, 177); */
+}
+
+#main {
+    overflow: hidden;
+    padding: 60px 120px;
+}
+
+/* header */
+#header {
+    float: left;
+    width: 25%;
+    margin-right: 20px;
+}
+#header .logo {
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+#header .logo img {
+    float: left;
+    width: 40px; height: 40px;
+    margin-right: 5px;
+}
+#header .logo h2 {
+    float: left;
+    font-size: 20px;
+    line-height: 40px;
+    color: #6c6c6e;
+}
+#header .menu {}
+#header .menu .mainMenu{}
+#header .menu .mainMenu li{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#header .menu .mainMenu li .subMenu {
+    display: none;
+    transform: translateY(-60px);
+}
+#header .menu .mainMenu li .subMenu.show {
+    display: block;
+    transform: translateY(0);
+    transition: transform .3s;
+}
+#header .menu .mainMenu li .subMenu li {
+    font-size: 14px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+#header .menu .mainMenu li .subMenu li:first-child {
+    margin-top: 30px;
+}
+
+/* section */
+#section {
+    float: left;
+}
+/* banner */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .bannerSlider {
+    width: 718px; height: 391px;
+    overflow: hidden;
+}
+.banner .bannerSlider .sliderInner {
+    position: relative;
+    width: 718px;
+    height: 1564px;
+    overflow: hidden;
+}
+.banner .bannerSlider .sliderInner .slider {}
+.banner .bannerSlider .sliderInner .slider img {
+    vertical-align: top;
+    width: 718px; height: 391px;
+    position: relative;
+}
+/* serviece01 */
+.serviece01 {}
+.serviece01 .tabMenu {
+    position: relative;
+    padding: 50px 0 20px;
+}
+.serviece01 .tabMenu ul {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.serviece01 .tabMenu ul li {
+    font-size: 27px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #acacac;
+}
+.serviece01 .tabMenu ul li.active {
+    color: #000;
+}
+.serviece01 .tabMenu ul li:first-child::after {
+    content: '|';
+    margin: 0 10px;
+}
+.serviece01 .servDesc {
+    display: flex;
+    justify-content: space-between;
+}
+.serviece01 .servDesc > div {
+    margin: 50px 10px;
+    position: relative;
+    text-align: center;
+}
+.serviece01 .servDesc > div img {
+    width: 97px; height: 97px; 
+}
+.serviece01 .servDesc > div p {
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* serviece02 */
+.serviece02 {
+    background-color: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.serviece02 div {
+    position: relative;
+    border: 1px solid #d6d8e6;
+    box-sizing: border-box;
+    display: inline-block;
+    background: #fff;
+    padding: 13px;
+    width: 213px;
+}
+.serviece02 div .click {
+    position: absolute;
+    left: 82%;
+    width: 30px; height: 30px;
+}
+.serviece02 div h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.serviece02 div .icon {
+    /* position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%); */
+    width: 90px; height: 90px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
+}
+.serviece02 div ul {}
+.serviece02 div ul li {
+    font-size: 10px;
+    margin-bottom: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+/* footer */
+#footer {
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    background-color: #edf2f8;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+#footer .footerLogo {
+    margin-right: 20px;
+}
+#footer .footerLogo img{
+ width: 59px; height: 59px;
+}
+#footer .footerLogo p{
+text-align: center;
+}
+#footer ul {
+    margin-right: 276px;
+}
+#footer ul li {
+    font-size: 13px;
+}
+#footer img {
+    width: 220px; height: 50px;
+}
