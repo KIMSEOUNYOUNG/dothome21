@@ -22,11 +22,11 @@
 #header {
     float: left;
     width: 25%;
-    margin-right: 20px;
+    margin-right: 5%;
 }
 #header .logo {
     overflow: hidden;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 #header .logo img {
     float: left;
@@ -44,16 +44,20 @@
 #header .menu .mainMenu li{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 #header .menu .mainMenu li .subMenu {
-    display: none;
-    transform: translateY(-60px);
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-30px);
+    transition: all .35s ease-in-out;
+    pointer-events: none;
 }
 #header .menu .mainMenu li .subMenu.show {
-    display: block;
+    opacity: 1;
+    max-height: 305px;
     transform: translateY(0);
-    transition: transform .3s;
+    transition: all .35s ease-in-out;
 }
 #header .menu .mainMenu li .subMenu li {
     font-size: 14px;
@@ -61,12 +65,13 @@
     border-bottom: 1px solid #000;
 }
 #header .menu .mainMenu li .subMenu li:first-child {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 /* section */
 #section {
     float: left;
+    width: 70%;
 }
 /* banner */
 .banner {
@@ -114,15 +119,20 @@
 .serviece01 .tabMenu ul li:first-child::after {
     content: '|';
     margin: 0 10px;
+    color: #000;
 }
 .serviece01 .servDesc {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .serviece01 .servDesc > div {
+    display: inline-block;
     margin: 50px 10px;
     position: relative;
     text-align: center;
+}
+.serviece01 .servCont .servDesc:nth-child(2){
+    display: none;
 }
 .serviece01 .servDesc > div img {
     width: 97px; height: 97px; 
@@ -176,11 +186,21 @@
 }
 .serviece02 div ul {}
 .serviece02 div ul li {
+    position: relative;
     font-size: 10px;
     margin-bottom: 13px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
+    padding: 0 15px;
+}
+.serviece02 div ul li::before {
+    position: absolute;
+    content: '';
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: #000;
+    left: 5px; top: 7px;
 }
 /* footer */
 #footer {
@@ -191,22 +211,25 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    overflow: hidden;
 }
 #footer .footerLogo {
     margin-right: 20px;
 }
 #footer .footerLogo img{
- width: 59px; height: 59px;
+    width: 50px; height: 59px;
 }
-#footer .footerLogo p{
-text-align: center;
+#footer .footerLogo p {
+    text-align: center;
 }
 #footer ul {
-    margin-right: 276px;
+    white-space: nowrap;
+    margin-right: 260px;
 }
 #footer ul li {
     font-size: 13px;
 }
 #footer img {
     width: 220px; height: 50px;
+    float: right;
 }
