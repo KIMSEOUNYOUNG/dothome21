@@ -172,7 +172,8 @@ figcaption {
 }
 
 #main.parallex {
-  background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#a18cd1), to(#fbc2eb));
+  background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 #main.slider {
