@@ -220,10 +220,11 @@
 }
 #contents_tit p {
 	padding:35px 0; 
-	font-family: 'Gaegu', cursive; font-size: 40px;
+	font-family: 'Cafe24Ssurround';
+	font-size: 35px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#ffde72; 
 }
 
 
@@ -280,9 +281,9 @@
 }
 
 .gridly .webstandard a {
-	color: #157ed3;
+	color: #fcc12c;
 	display: block;
-	border-bottom: 3px solid #a5d5fa;
+	border-bottom: 3px solid #ffd66d;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
@@ -384,7 +385,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #f2a1d1;
+	background: #fccf6e;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
@@ -407,7 +408,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #a92c76;
+	color: #e48304;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
