@@ -168,12 +168,13 @@ figcaption {
 }
 
 #main.mouse {
-  background: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#c1dfc4), to(#deecdd));
+  background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 
 #main.parallex {
-  background: -webkit-gradient(linear, left bottom, left top, from(#a18cd1), to(#fbc2eb));
-  background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#d299c2), to(#fef9d7));
+  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
 }
 
 #main.slider {
@@ -210,7 +211,8 @@ figcaption {
 }
 
 #contents h1.mouse {
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0ba360), to(#3cba92));
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }
 
 #contents h1.parallex {
