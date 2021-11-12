@@ -58,7 +58,7 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #header.sub {
 	background:url(../img/header_bg.png) center 7px;
 	padding: 35px 0 55px 0px;
-	border-top: 3px solid #32799e;
+	border-top: 3px solid #a1d4f0;
 }
 #header.sub .header_icon {
 	display: none;
@@ -174,7 +174,7 @@ padding: 8px 12px;
 #footer{
 	margin-top: 80px;
 	padding: 20px;
-	background: #f3f3f3;
+	background: #ffffff;
 	text-align: center
 }
 .twitter-share-button{
