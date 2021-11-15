@@ -229,14 +229,13 @@
         // $(window).mousemove(function(){});
         // 함수화
         function mouseMove(e){
-            let positionSlow = (e.pageX - ( $(window).width()/2 )) * 0.1;
-            let positionFast = (e.pageX - ( $(window).width()/2 )) * 0.2;
+            let positionSlow = (e.pageX - window.innerWidth/2) * 0.1;
+            let positionFast = (e.pageX - window.innerWidth/2) * 0.2;
 
             gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
             gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
         }
-        // on은 이벤트 함수
-        $(window).on("mousemove", mouseMove);
+        window.addEventListener("mousemove", mouseMove);
         
     </script>
 </body>
