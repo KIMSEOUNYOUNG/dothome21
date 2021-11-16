@@ -1,0 +1,55 @@
+/* chosun */
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* slik serif */
+/* slik serif extraLight italic */
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-ExtraLightItalic.woff) format('woff2'),
+         url(../fonts/SilkSerif-ExtraLightItalic.woff2) format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+/* slik serif light */
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-Light.woff) format('woff2'),
+         url(../fonts/SilkSerif-Light.woff2) format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+/* slik serif light italic*/
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-LightItalic.woff) format('woff2'),
+         url(../fonts/SilkSerif-LightItalic.woff2) format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+/* slik serif regular */
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-Regular.woff) format('woff2'),
+         url(../fonts/SilkSerif-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* slik serif medium */
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-Medium.woff) format('woff2'),
+         url(../fonts/SilkSerif-Medium.woff2) format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
