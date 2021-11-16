@@ -14,6 +14,7 @@ body {
     position: fixed;
     left: 0; bottom: 0;
     width: 100%;
+    z-index: 10000;
 }
 #loader .loader {
     position: relative;
@@ -39,9 +40,6 @@ body {
 }
 
 /* container */
-.imgContainer {
-    
-}
 .container {
     max-width: 90%;
     width: 100%;
@@ -54,6 +52,7 @@ body {
     position: fixed;
     left: 0; top: 0;
     width: 100%;
+    z-index: 10000;
 }
 #header .headerWrap {
     position: relative;
@@ -119,5 +118,19 @@ body {
 }
 
 /* main */
+#main {}
+#main #intro{
+    width: 100%;
+}
+#main #intro .imgWrap {
+    position: relative;
+    max-width: 100%;
+    height: 294vh;
+    overflow: hidden;
+}
+#main #intro .imgWrap img{
+    position: absolute;
+    width: 100vw; 
+}
 
 /* footer */
