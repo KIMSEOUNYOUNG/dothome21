@@ -19,7 +19,7 @@ body {
 #loader .loader {
     position: relative;
     display: flex;
-    padding: 30px;
+    padding: 2vw;
     text-align: center;
 }
 #loader .loadImg {
@@ -57,7 +57,7 @@ body {
 #header .headerWrap {
     position: relative;
     display: flex;
-    padding: 30px;
+    padding: 2vw;
     text-align: center;
     justify-content: space-between;
 }
@@ -168,13 +168,30 @@ body {
     line-height: 1.4;
     font-size: 0.8vw;
     text-align: center;
+    white-space: nowrap;
 }
 
 /* about */
 #about {
+    position: relative;
     background-color: #9A8275;
     padding-top: 22vw;
+    overflow: hidden;
 }
+
+/* menuImage */
+.meImgWrap {
+    
+}
+.meImgWrap .menuImage {
+    display: flex;
+}
+.meImgWrap .menuImage .bulr img {
+    width: 25vw; height: 30vw;
+    object-fit: cover;
+}
+
+/* menu */
 .menu {
 }
 #about .menu ul {
@@ -194,21 +211,23 @@ body {
     text-transform: uppercase;
     margin-right: 3vw;
 }
-#about .menu li .menuAllow {
-    
-    /* width: 15vw; height: 10vh; */
+#about .menu li .menuAllow {}
+#about .menu li .menuAllow img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15vw; height: 10vh;
 }
 #about .menu li .menuAllow::before {
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     display: inline-block;
     content: '';
     background-image: url(../img/allow.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 15vw; height: 10vh;
-    line-height: 10vh;
+    width: 10vw; height: 8vw;
 }
 #about .aboutIntro h2 {}
 #about .aboutIntro .aboutImg {
