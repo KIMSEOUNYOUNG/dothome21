@@ -41,7 +41,7 @@ body {
 
 /* container */
 .container {
-    max-width: 90%;
+    max-width: 80%;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -107,6 +107,9 @@ body {
     text-transform: uppercase;
     line-height: 30px;
 }
+#header .headerWrap .contactPage a {
+    color: #FFFFE7;
+}
 #header .headerWrap .contactPage::after {
     position: absolute;
     left: 50%; top: 25px;
@@ -119,18 +122,103 @@ body {
 
 /* main */
 #main {}
-#main #intro{
+
+/* intro */
+#intro{
+    background: rgb(82, 55, 55);
     width: 100%;
+    z-index: 0;
+    position: relative;
 }
 #main #intro .imgWrap {
-    position: relative;
     max-width: 100%;
-    height: 294vh;
     overflow: hidden;
 }
 #main #intro .imgWrap img{
+    vertical-align: top;
+    width: 100vw;
+}
+.introTitle {
     position: absolute;
-    width: 100vw; 
+    left: 50%; top: 8%;
+    transform: translateX(-50%);
+    /* text-align: center;
+    margin-top: 17vh; */
+}
+.introTitle div {
+    font-family: 'Silk Serif';
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: 10vw;
+    white-space: nowrap;
+    text-align: center;
+}
+.introDesc {
+    position: absolute;
+    left: 50%; bottom: 4%;
+    transform: translateX(-50%);
+    /* text-align: center;
+    margin-top: 185vh; */
+}
+.introDesc div {
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+/* about */
+#about {
+    background-color: #9A8275;
+    padding-top: 22vw;
+}
+.menu {
+}
+#about .menu ul {
+    
+}
+#about .menu li {
+    position: relative;
+    display: flex;
+}
+#about .menu li a {
+    font-family: 'Silk Serif';
+    font-weight: 200;
+    font-size: 10vw;
+    line-height: 1.1;
+    font-style: italic;
+    color: #FFFFE7;
+    text-transform: uppercase;
+    margin-right: 3vw;
+}
+#about .menu li .menuAllow {
+    
+    /* width: 15vw; height: 10vh; */
+}
+#about .menu li .menuAllow::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    content: '';
+    background-image: url(../img/allow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15vw; height: 10vh;
+    line-height: 10vh;
+}
+#about .aboutIntro h2 {}
+#about .aboutIntro .aboutImg {
+    display: flex;
+    justify-content: center;
+}
+#about .aboutIntro .aboutImg img {
+    display: block;
+    text-align: center;
+    width: 25vw;
 }
 
 /* footer */
