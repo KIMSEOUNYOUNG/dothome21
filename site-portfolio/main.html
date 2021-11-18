@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +47,7 @@
     <!--웹폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="loader">
         <div class="loader">
@@ -87,12 +89,12 @@
         <!--//intro-->
 
         <section id="about">
-            
+
             <div class="meImgWrap">
                 <div class="menuImage">
                     <div class="bulr"><img src="assets/img/main.jpg" alt="메인메이뉴이미지"></div>
-                    <div class="bulr"><img src="assets/img/select02.jpg" alt="메인메이뉴이미지"></div>
-                    <div class="bulr"><img src="assets/img/contact.png" alt="메인메이뉴이미지"></div>
+                    <div class="bulr"><img src="assets/img/select02.jpg" alt="어바웃메뉴이미지"></div>
+                    <div class="bulr"><img src="assets/img/contact.png" alt="컨택트메뉴이미지"></div>
                 </div>
             </div>
 
@@ -142,5 +144,42 @@
 
     </footer>
     <!--//footer-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+        const about = document.getElementById("about");
+        const menuImg = document.querySelectorAll(".bulr");
+        const menuList = document.querySelectorAll(".menu ul li");
+        const menu = document.querySelector(".menu");
+        const meImgWrap = document.querySelector(".meImgWrap");
+        // console.log(about)
+        // console.log(menuImg);
+        // console.log(menu);
+
+        //이미지 보여주기
+        menuList.forEach((list, index) => {
+            menu.addEventListener("mouseout", function () {
+                menuImg[index].classList.remove("show");
+            });
+
+            list.addEventListener("mouseover", function () {
+                console.log(list)
+                menuImg.forEach((el, imgIndex) => {
+                    el.classList.remove("show");
+                });
+                menuImg[index].classList.add("show");
+            });
+            //마우스 따라 이미지 움직이기
+            about.addEventListener("mousemove", function (e){
+                console.log(e);
+                gsap.to(meImgWrap, {
+                    duration: 0.8,
+                    left: e.clientX,
+                    top: e.clientY
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

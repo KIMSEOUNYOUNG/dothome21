@@ -175,18 +175,30 @@ body {
 #about {
     position: relative;
     background-color: #9A8275;
-    padding-top: 22vw;
+    padding: 22vw 0;
     overflow: hidden;
 }
 
 /* menuImage */
 .meImgWrap {
-    
+    position: absolute;
+    left: 80%; 
+    /* top: 50%; */
+    /* transform: translate(-50%, -50%); */
 }
 .meImgWrap .menuImage {
+    width: 25vw; height: 30vw;
     display: flex;
 }
+.meImgWrap .menuImage .bulr {
+    opacity: 0;
+    transition: opacity .5s ease, visibility 0s ease .5s, z-index 0s .5s,max-width 0s .5s;
+}
+.meImgWrap .menuImage .bulr.show {
+    opacity: 1;
+}
 .meImgWrap .menuImage .bulr img {
+    position: absolute;
     width: 25vw; height: 30vw;
     object-fit: cover;
 }
@@ -211,7 +223,9 @@ body {
     text-transform: uppercase;
     margin-right: 3vw;
 }
-#about .menu li .menuAllow {}
+#about .menu li .menuAllow {
+    position: relative;
+}
 #about .menu li .menuAllow img {
     position: absolute;
     top: 50%;
