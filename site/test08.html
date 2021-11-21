@@ -20,10 +20,46 @@
             <div class="headerLogo"><img src="img08/logo.jpg" alt="헤더로고"></div>
             <nav>
                 <ul>
-                    <li><a herf="#">무역통상정보</a></li>
-                    <li><a herf="#">회원/업무지원</a></li>
-                    <li><a herf="#">무역통계</a></li>
-                    <li><a herf="#">협회안내</a></li>
+                    <li class="menu">
+                        <a herf="#">무역통상정보</a>
+                        <ul class="hmenu">
+                            <a href="#"><li>1</li></a> 
+                            <a href="#"><li>2</li></a>
+                            <a href="#"><li>3</li></a>
+                            <a href="#"><li>4</li></a> 
+                            <a href="#"><li>5</li></a> 
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a herf="#">회원/업무지원</a>
+                        <ul class="hmenu">
+                            <a href="#"><li>1</li></a> 
+                            <a href="#"><li>2</li></a>
+                            <a href="#"><li>3</li></a>
+                            <a href="#"><li>4</li></a> 
+                            <a href="#"><li>5</li></a> 
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a herf="#">무역통계</a>
+                        <ul class="hmenu">
+                            <a href="#"><li>1</li></a> 
+                            <a href="#"><li>2</li></a>
+                            <a href="#"><li>3</li></a>
+                            <a href="#"><li>4</li></a> 
+                            <a href="#"><li>5</li></a> 
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a herf="#">협회안내</a>
+                        <ul class="hmenu">
+                            <a href="#"><li>1</li></a> 
+                            <a href="#"><li>2</li></a>
+                            <a href="#"><li>3</li></a>
+                            <a href="#"><li>4</li></a> 
+                            <a href="#"><li>5</li></a> 
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -114,7 +150,7 @@
                     <div class="left">
                         <div class="leUP">
                             <div id="tbBtn" class="title03">
-                                <h3>보도자료</h3>
+                                <h3 class="active">보도자료</h3>
                                 <h3>언론기고</h3>
                                 <img src="img08/plus.jpg" alt="플러스">
                             </div>
@@ -244,22 +280,18 @@
     </footer>
     <!--//footer-->
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         // 2단 메뉴
-        // const mainMenu = document.querySelectorAll(".mainMenu > li");
-        
-        // mainMenu.forEach(el=>{
-            
-        //     el.addEventListener("click", function(){
+        $(".menu").mouseenter(function () {
+            $(this).find(".hmenu a").stop().slideDown(200);
+        });
+        $(".menu").mouseleave(function () {
+            $(this).find(".hmenu a").stop().slideUp(200);
+        });
 
-        //         el.classList.remove("active");
-                
-        //         const subMenu = this.querySelector(".subMenu");
-                
-        //         subMenu.classList.toggle("show");
-        //     });
-        // })
-
+        //슬라이더
         const bannerWrap = document.querySelector(".bannerWrap");
         const bannerSlider = document.querySelector(".bannerSlider");
         const sliderInner = bannerSlider.querySelector(".sliderInner");
@@ -267,8 +299,6 @@
         const sliderBtn = bannerWrap.querySelector(".sliderBtn");
         const sliderBtnPrev = document.querySelector(".prev");
         const sliderBtnNext = document.querySelector(".next");
-        
-        console.log
 
         let sliderCount = slider.length;
         let sliderWidth = document.querySelector(".slider").offsetWidth;
@@ -302,6 +332,13 @@
         // console.log(tabCont)
         tabBtn.forEach((btn, idx)=>{
             btn.addEventListener("click", function(){
+                // console.log(btn);
+                
+                tabBtn.forEach((menu)=>{
+                    menu.classList.remove("active");
+                });
+                btn.classList.add("active");
+
                 tabCont.forEach(desc=>{
                     tabCont[idx].classList.add("show");
                     desc.classList.remove("show");

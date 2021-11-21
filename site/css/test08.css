@@ -33,12 +33,26 @@ body {
 }
 #header nav ul {
     display: flex;
+    
 }
-#header nav ul li {
+#header nav ul .menu {
     margin-left: 20px;
+    position: relative;
 }
-#header nav ul li a {
+#header nav ul .menu a {
     display: inline-block;
+}
+#header nav .menu .hmenu {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+    background-color: rgb(202, 202, 202);
+}
+#header nav .menu .hmenu a {
+    display: block;
+    text-align: center;
+    display: none;
 }
 /* main */
 #main {
@@ -51,22 +65,20 @@ body {
     position: relative;
 }
 #banner .bannerWrap .bannerSlider {
-    width: 1518px;
-    height: 700px;
+    width: 1920px;
     overflow: hidden;
 }
 #banner .bannerWrap .bannerSlider .sliderInner {
     display: flex;
-    width: 4554px;
+    width: 5760px;
 }
 #banner .bannerWrap .bannerSlider .sliderInner .slider {
-    width: 1518px;
-    height: 700px;
+    width: 1920px;
 }
 #banner .bannerWrap .bannerSlider .sliderInner .slider img {
     /* width: 100%; */
-    width: 1518px;
-    height: 700px;
+    width: 100%;
+    vertical-align: top;
 }
 .slider:nth-child(1) {z-index: 3;}
 .slider:nth-child(2) {z-index: 2;}
@@ -76,8 +88,10 @@ body {
     z-index: 10;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: 100px; height: 100px;
     background: rgba(112, 71, 71, .5);
+    opacity: 0;
 }
 .sliderBtn .prev {
     left: 0;
@@ -178,6 +192,10 @@ body {
 .title03 h3 {
     float: left;
     font-size: 20px;
+    color: rgb(167, 167, 167);
+}
+.title03 h3.active {
+    color: rgb(0, 0, 0);
 }
 .title03 h3:nth-child(2)::before {
     content: '|';
