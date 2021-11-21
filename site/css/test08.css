@@ -75,7 +75,7 @@ body {
 .sliderBtn a {
     z-index: 10;
     position: absolute;
-    top: 76%;
+    top: 50%;
     width: 100px; height: 100px;
     background: rgba(112, 71, 71, .5);
 }
@@ -187,6 +187,12 @@ body {
 .title03 img {
     float: right;
     width: 30px; height: 30px;
+}
+.tab ul li{
+    display: none;
+}
+.tab ul li.show {
+    display: block;
 }
 .leUP .cont2 {
     margin-bottom: 10px;
