@@ -398,11 +398,11 @@ body {
 .site .num {
     position: absolute;
     font-weight: 900;
-    font-size: 40vw;
-    letter-spacing: -5vw;
+    font-size: 52vw;
+    letter-spacing: -4vw;
     color: #CFA8A0;
     opacity: .5;
-    left: -30vw; top: -20vw;
+    left: -33.1vw; top: -60vw;
 }
 .site .title{
     position: absolute;
@@ -426,9 +426,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-.site .img-Wrap .mock {
-    width: 49vw;
-}
+.site .img-Wrap .mock {}
 .site .img-Wrap .mock img {
     width: 100%;
 }
