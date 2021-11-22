@@ -33,11 +33,11 @@ body {
 }
 #header nav ul {
     display: flex;
-    
 }
 #header nav ul .menu {
     margin-left: 20px;
     position: relative;
+    z-index: 9999;
 }
 #header nav ul .menu a {
     display: inline-block;
