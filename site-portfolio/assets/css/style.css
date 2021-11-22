@@ -389,15 +389,17 @@ body {
 #siteCoding .siCoTitle div {}
 .site {
     position: relative;
-    margin: 100vw 0;
-    width: 940px; height: 1vw;
-    max-width: 70%;
-    margin-left: auto;
-    background: rgb(121, 67, 67);
+    /* margin: 100vw 0; */
+    width: 100vw; height: 100vw; 
+    background: rgb(97, 59, 59);
 }
-.site:nth-child(even) {
-    margin-right: auto;
-    text-align: right;
+.site .siteInner {
+    position: relative;
+    margin-left: auto;
+    width: 940px;
+    max-width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .site .num {
     position: absolute;
@@ -436,13 +438,31 @@ body {
     border: 1px solid #fff;
 }
 .site .img-Wrap {
-    position: absolute;
+    position: relative;
     top: 50%;
-    transform: translateY(-50%);
 }
-.site .img-Wrap .mock {}
-.site .img-Wrap .mock img {
+.site .img-Wrap .mock {
+    position: relative;
     width: 100%;
+}
+.site .img-Wrap .mock img {
+    position: absolute;
+    width: 100%;
+    vertical-align: top;
+}
+.site:nth-child(even) {
+    /* margin-right: auto; */
+    text-align: right;
+    background: #FEEEEB;
+}
+.site:nth-child(even) .num {
+    position: absolute;
+    font-weight: 900;
+    font-size: 52vw;
+    letter-spacing: -4vw;
+    color: #F6D6CF;
+    opacity: .5;
+    left: 9.5vw; top: -60vw;
 }
 
 
