@@ -389,11 +389,15 @@ body {
 #siteCoding .siCoTitle div {}
 .site {
     position: relative;
-    margin: 50vw 0;
-    width: 940px;
+    margin: 100vw 0;
+    width: 940px; height: 1vw;
     max-width: 70%;
     margin-left: auto;
     background: rgb(121, 67, 67);
+}
+.site:nth-child(even) {
+    margin-right: auto;
+    text-align: right;
 }
 .site .num {
     position: absolute;
