@@ -7,6 +7,7 @@
 body {
     background-color: rgb(211, 133, 133);
     color: #FFFFE7;
+    font-family: 'Silk Serif';
 }
 
 /* loader */
@@ -278,6 +279,56 @@ body {
 .aboutIntro .introduce {
     font-family: 'Chosunilbo_myungjo';
     font-size: 1.2vw;
+    margin-bottom: 20vw;
 }
-
+.mySkill {
+    overflow: hidden;
+}
+.mySkill h2 {
+    font-family: 'Silk Serif';
+    font-weight: 200;
+    font-style: italic;
+    line-height: .8;
+    font-size: 5vw;
+    text-transform: uppercase;
+    float: right;
+}
+.mySkill .skillList {
+    width: 100%;
+    margin-top: 18vw;
+}
+.skillList .listDe {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 1vw;
+    margin-top: 1.5vw;
+    border-bottom: 1px solid #FFFFE7;
+    position: relative;
+}
+.skillList .listDe span:first-child {
+    flex: 0 0 5%;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1vw;
+}
+.skillList .listDe h4 {
+    flex: 0 0 10%;
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+.skillList .listDe .skillDesc {
+    flex: 0 0 70%;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 1.05vw;
+    line-height: 1.4;
+}
+.skillList .listDe span:last-child {
+    position: absolute;
+    right: 0;
+    flex: 0 0 2%;
+    font-size: 1vw;
+}
 /* footer */
