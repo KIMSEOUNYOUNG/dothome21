@@ -17,6 +17,15 @@
     font-style: italic;
     font-display: swap;
 }
+/* slik serif extraLight */
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-ExtraLight.woff) format('woff2'),
+         url(../fonts/SilkSerif-ExtraLight.woff2) format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
 /* slik serif light */
 @font-face {
     font-family: 'Silk Serif';
@@ -50,6 +59,15 @@
     src: url(../fonts/SilkSerif-Medium.woff) format('woff2'),
          url(../fonts/SilkSerif-Medium.woff2) format('woff2');
     font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/* slik serif black */
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(../fonts/SilkSerif-Black.woff) format('woff2'),
+         url(../fonts/SilkSerif-Black.woff2) format('woff2');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
