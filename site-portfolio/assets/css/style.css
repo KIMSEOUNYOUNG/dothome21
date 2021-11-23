@@ -43,7 +43,7 @@ body {
 /* container */
 .container {
     max-width: 80%;
-    width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
     position: relative;
 }
@@ -384,86 +384,67 @@ body {
     font-size: 10vw;
     white-space: nowrap;
     text-align: center;
-    margin-top: 16vw;
+    margin: 16vw 0 11vw;
 }
 #siteCoding .siCoTitle div {}
 .site {
     position: relative;
-    /* margin: 100vw 0; */
-    width: 100vw; height: 100vw; 
     background: rgb(97, 59, 59);
+    /* height: 198vh; */
+    /* padding: 10vw 0; */
 }
 .site .siteInner {
     position: relative;
-    margin-left: auto;
-    width: 940px;
-    max-width: 70%;
-    top: 50%;
-    transform: translateY(-50%);
 }
-.site .num {
+.site .siteInner .num {
     position: absolute;
+    font-size: 52.0835vw;
     font-weight: 900;
-    font-size: 52vw;
-    letter-spacing: -4vw;
     color: #CFA8A0;
-    opacity: .5;
-    left: -33.1vw; top: -60vw;
+    letter-spacing: -4vw;
 }
-.site .title{
+.site .siteInner .title {
     position: absolute;
-    left: -30.5vw; top: -18vw;
-    font-weight: 400;
-    font-size: 8vw;
+    font-weight: normal;
     line-height: 0.9;
+    font-size: 7.8125vw;
     z-index: 10;
 }
-.site .referDesc {
+.site .siteInner .referDesc {
     position: absolute;
     font-family: 'Chosunilbo_myungjo';
-    font-size: 1.25vw;
     line-height: 1.4;
+    font-size: 1.25vw;
+    width: 44%;
     z-index: 10;
-    width: 35vw;
-    left: -30vw;
 }
-.site .juumBtn {
+.site .siteInner .jumpBtn {
     position: absolute;
-    top: 11.5vw; left: -30vw;
+    display: inline-block;
+    font-size: 1.5625vw;
+    line-height: 1.5vw;
+    padding: 0.8vw 9vw 1vw;
+    border: 1px solid;
     z-index: 10;
-    font-size: 1.6vw;
-    letter-spacing: -1;
-    line-height: 0.9;
-    padding: 1vw 10vw;
-    border: 1px solid #fff;
 }
-.site .img-Wrap {
+.site .siteInner .img-Wrap {
     position: relative;
-    top: 50%;
+    float: right;
+    margin: auto 0;
 }
-.site .img-Wrap .mock {
-    position: relative;
-    width: 100%;
+.site .siteInner .img-Wrap .mock {
+    /* position: relative; */
+    width: 48.959vw;
+    height: 36.719vw;
 }
-.site .img-Wrap .mock img {
+.site .siteInner .img-Wrap .mock img {
     position: absolute;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
     vertical-align: top;
 }
-.site:nth-child(even) {
-    /* margin-right: auto; */
-    text-align: right;
-    background: #FEEEEB;
-}
-.site:nth-child(even) .num {
-    position: absolute;
-    font-weight: 900;
-    font-size: 52vw;
-    letter-spacing: -4vw;
-    color: #F6D6CF;
-    opacity: .5;
-    left: 9.5vw; top: -60vw;
-}
+
 
 
 /* footer */
