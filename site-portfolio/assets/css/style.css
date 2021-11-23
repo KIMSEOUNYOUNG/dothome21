@@ -389,12 +389,11 @@ body {
 #siteCoding .siCoTitle div {}
 .site {
     position: relative;
-    background: rgb(97, 59, 59);
-    /* height: 198vh; */
-    /* padding: 10vw 0; */
+    background: #DABAB4;
 }
 .site .siteInner {
     position: relative;
+    padding: 50vw 0;
 }
 .site .siteInner .num {
     position: absolute;
@@ -402,6 +401,9 @@ body {
     font-weight: 900;
     color: #CFA8A0;
     letter-spacing: -4vw;
+    opacity: .5;
+    top: -60vw;
+    left: -3vw;
 }
 .site .siteInner .title {
     position: absolute;
@@ -409,6 +411,10 @@ body {
     line-height: 0.9;
     font-size: 7.8125vw;
     z-index: 10;
+    top: -18vw;
+    /* left: -0.7vw; */
+    letter-spacing: -.05vw;
+    color: #FFFFE7;
 }
 .site .siteInner .referDesc {
     position: absolute;
@@ -417,6 +423,8 @@ body {
     font-size: 1.25vw;
     width: 44%;
     z-index: 10;
+    top: -0.5vw;
+    color: #FFFFE7;
 }
 .site .siteInner .jumpBtn {
     position: absolute;
@@ -424,13 +432,17 @@ body {
     font-size: 1.5625vw;
     line-height: 1.5vw;
     padding: 0.8vw 9vw 1vw;
-    border: 1px solid;
+    border: 1px solid #FFFFE7;
     z-index: 10;
+    top: 11vw;
+}
+.site .siteInner .jumpBtn a {
+    color: #FFFFE7;
 }
 .site .siteInner .img-Wrap {
     position: relative;
     float: right;
-    margin: auto 0;
+    top: -18vw;
 }
 .site .siteInner .img-Wrap .mock {
     /* position: relative; */
@@ -443,6 +455,42 @@ body {
     object-fit: cover;
     object-position: center;
     vertical-align: top;
+}
+/* even */
+.site:nth-child(even) {
+    position: relative;
+    background: #FEEEEB;
+}
+.site:nth-child(even) .siteInner .num {
+    color: #F6D6CF;
+    left: 26vw;
+}
+
+.site:nth-child(even) .siteInner .title {
+    top: -18vw;
+    color: #767070;
+    right: 0;
+}
+
+.site:nth-child(even) .siteInner .referDesc {
+    top: -0.5vw;
+    color: #767070;
+    text-align: right;
+    right: 0;
+}
+
+.site:nth-child(even) .siteInner .jumpBtn {
+    border: 1px solid #767070;
+    top: 11vw;
+    right: 0;
+}
+
+.site:nth-child(even) .siteInner .jumpBtn a {
+    color: #767070;
+}
+
+.site:nth-child(even) .siteInner .img-Wrap {
+    float: left;
 }
 
 
