@@ -393,7 +393,7 @@ body {
 }
 .site .siteInner {
     position: relative;
-    padding: 50vw 0;
+    padding: 55vw 0 50vw;
 }
 .site .siteInner .num {
     position: absolute;
@@ -471,28 +471,21 @@ body {
     color: #767070;
     right: 0;
 }
-
 .site:nth-child(even) .siteInner .referDesc {
-    top: -0.5vw;
     color: #767070;
     text-align: right;
     right: 0;
 }
-
 .site:nth-child(even) .siteInner .jumpBtn {
     border: 1px solid #767070;
     top: 11vw;
     right: 0;
 }
-
 .site:nth-child(even) .siteInner .jumpBtn a {
     color: #767070;
 }
-
 .site:nth-child(even) .siteInner .img-Wrap {
     float: left;
 }
-
-
 
 /* footer */
