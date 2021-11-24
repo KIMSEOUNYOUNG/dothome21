@@ -334,7 +334,7 @@ body {
 /* siteCoding */
 #siteCoding {
     background: #DABAB4;
-    padding: 30vw 0 35vw;
+    padding-top: 30vw;
 }
 #siteCoding .referTitle {
     font-weight: 200;
@@ -386,14 +386,13 @@ body {
     text-align: center;
     margin: 16vw 0 11vw;
 }
-#siteCoding .siCoTitle div {}
 .site {
     position: relative;
     background: #DABAB4;
 }
 .site .siteInner {
     position: relative;
-    padding: 55vw 0 50vw;
+    padding: 60vw 0 50vw;
 }
 .site .siteInner .num {
     position: absolute;
@@ -488,4 +487,44 @@ body {
     float: left;
 }
 
+/* circle */
+.circle {
+    width: 18.49vw;
+    height: 18.49vw;
+    /* background: rgb(128, 71, 71); */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle .innerCircle {}
+.circle .innerCircle .circleImg {
+    position: absolute;
+    background-image: url(../img/circle01.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.circle .innerCircle .circleImg:last-child {
+    background-image: url(../img/circle02.svg);
+}
+
+/* javaJqu */
+#javaJqu {
+    background: #E3DEE8;
+    padding-top: 30vw;
+}
+#javaJqu .jjCoTitle {
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: 10vw;
+    white-space: nowrap;
+    text-align: center;
+    margin: 16vw 0 11vw;
+    color: #807A85;
+}
+    
 /* footer */
