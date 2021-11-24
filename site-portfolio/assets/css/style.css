@@ -576,6 +576,7 @@ body {
 #effectScript {
     padding: 15vw 0;
     overflow: hidden;
+    background: #AAAEB9;
 }
 #effectScript .container {
     overflow: visible;
@@ -661,5 +662,38 @@ body {
     color: #FFFFE7;
     line-height: 5.2vw;
 }
+/* scriptDetail */
+.scriptDetail {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -2.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.scriptDetail .detailIcon {
+    position: relative;
+    width: 1vw; height: 1vw;
+    margin-right: 10px;
+}
+.scriptDetail .detailIcon span {
+    position: absolute;
+    width: 6px; height: 6px;
+    background: #EEEBF6;
+    border-radius: 50%;
+}
+.scriptDetail .detailIcon span:first-child {left: 0; top: 0;}
+.scriptDetail .detailIcon span:nth-child(2) {left: 0; bottom: 0;}
+.scriptDetail .detailIcon span:nth-child(3) {right: 0; top: 0;}
+.scriptDetail .detailIcon span:nth-child(4) {right: 0; bottom: 0;}
+.scriptDetail p {
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #EEEBF6;
+    line-height: 1.4;
+    font-size: 1.04vw;
+}
+.scriptDetail:hover .detailIcon {}
 
 /* footer */
