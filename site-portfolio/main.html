@@ -17,32 +17,35 @@
     <meta property="og:url" content="/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="React Portfolio App" />
-    <meta property="og:description" content="리액트 포트폴리오 사이트입니다." />
+    <meta property="og:description" content="포트폴리오 사이트입니다." />
     <meta property="og:image" content="/" />
     <!-- twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="React Portfolio App" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/" />
-    <meta name="twitter:description" content="리액트 포트폴리오 사이트입니다." />
+    <meta name="twitter:description" content="포트폴리오 사이트입니다." />
 
     <!-- Mobile -->
     <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-title" content="Portfolio" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- 아이콘 -->
-    <link rel="icon" href="assets/icon/icon_256.png" />
+    <!-- <link rel="icon" href="assets/icon/icon_256.png" />
     <link rel="apple-touch-icon" href="assets/icon/icon_256.png" />
     <link rel="shortcut icon" href="assets/icon/favicon.ico" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/icon_192.png" />
     <link rel="icon" type="image/png" sizes="256x256" href="assets/icon/icon_256.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/icon_16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon_32.png" /> -->
 
     <!--css-->
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--swiper-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
     <!--웹폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -319,7 +322,7 @@
                     <div>javascript</div>
                     <div>jquery</div>
                 </div>
-                <div class="site">
+                <div class="site jj">
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">06</span>
@@ -337,7 +340,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="site">
+                <div class="site jj">
+                    <div class="circle">
+                        <div class="innerCircle">
+                            <div class="circleImg jsjq"></div>
+                            <div class="circleImg jsjq"></div>
+                        </div>
+                    </div>
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">07</span>
@@ -358,7 +367,69 @@
             </article>
             <!--//javaJqu-->
             
-            <article id="effectScript"></article>
+            <article id="effectScript">
+                <div class="container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide hovereffect">
+                            <div class="effImgWrap">
+                                <img class="imgHn" src="assets/img/slider01.jpg" alt="표지1">
+                                <img class="imgHover" src="assets/img/Mockup08.jpg" alt="목업8">
+                                <div class="overlay">
+                                    <p>parallax</p>
+                                    <p>effect</p>
+                                    <a href="#"><div>view</div></a>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide hovereffect">
+                              <div class="effImgWrap">
+                                <img class="imgHn" src="assets/img/slider02.jpg" style="top: -11vw" alt="표지2">
+                                <img class="imgHover" src="assets/img/Mockup09.jpg" alt="목업9">
+                                <div class="overlay">
+                                    <p>game</p>
+                                    <p>effect</p>
+                                    <a href="#"><div>view</div></a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide hovereffect">
+                            <div class="effImgWrap">
+                                <img class="imgHn" src="assets/img/silder03.jpg" alt="표지3">
+                                <img class="imgHover" src="assets/img/Mockup10.jpg" alt="목업10">
+                                <div class="overlay">
+                                    <p>menu</p>
+                                    <p>effect</p>
+                                    <a href="#"><div>view</div></a>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide hovereffect">
+                            <div class="effImgWrap">
+                                <img class="imgHn" src="assets/img/sldier04.jpg" alt="표지4">
+                                <img class="imgHover" src="assets/img/Mockup11.jpg" alt="목업11">
+                                <div class="overlay">
+                                    <p>mouse</p>
+                                    <p>effect</p>
+                                    <a href="#"><div>view</div></a>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide hovereffect">
+                            <div class="effImgWrap">
+                                <img class="imgHn" src="assets/img/slider05.jpg" alt="표지5">
+                                <img class="imgHover" src="assets/img/Mockup12.jpg" alt="목업12">
+                                <div class="overlay">
+                                    <p>slider</p>
+                                    <p>effect</p>
+                                    <a href="#"><div>view</div></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
             <!--//effectScript-->
             <article id="phpRefer"></article>
             <!--//phpRefer-->
@@ -376,6 +447,7 @@
     <!--//footer-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
         const about = document.getElementById("about");
         const menuImg = document.querySelectorAll(".bulr");
@@ -408,6 +480,12 @@
                     top: e.clientY
                 });
             });
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 400,
+            grabCursor: true,
         });
     </script>
 </body>

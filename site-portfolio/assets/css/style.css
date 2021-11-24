@@ -525,6 +525,141 @@ body {
     text-align: center;
     margin: 16vw 0 11vw;
     color: #807A85;
+    margin-bottom: 15vw;
 }
-    
+.site.jj {
+    background: #B5AABE;
+}
+.site.jj .siteInner .num {
+    color: #ADA3B6;
+}
+.site.jj .siteInner .title {
+    color: #F9F9F9;
+}
+.site.jj .siteInner .referDesc {
+    color: #F9F9F9;
+}
+.site.jj .siteInner .jumpBtn {
+    border: 1px solid #F9F9F9;
+}
+.site.jj .siteInner .jumpBtn a {
+    color: #F9F9F9;
+}
+/* even */
+.site.jj:nth-child(even) {
+    background: #E3DEE8;
+}
+.site.jj:nth-child(even) .siteInner .num {
+    color: #DBD5E1;
+}
+.site.jj:nth-child(even) .siteInner .title {
+    color: #807A85;
+}
+.site.jj:nth-child(even) .siteInner .referDesc {
+    color: #807A85;
+}
+.site.jj:nth-child(even) .siteInner .jumpBtn {
+    border: 1px solid #807A85;
+}
+.site.jj:nth-child(even) .siteInner .jumpBtn a {
+    color: #807A85;
+}
+/* circle */
+.site.jj .circleImg.jsjq {
+    background-image: url(../img/circle03.svg);
+}
+.site.jj .circleImg.jsjq:last-child {
+    background-image: url(../img/circle04.svg);
+}
+
+/* effectScript */
+#effectScript {
+    padding: 15vw 0;
+    overflow: hidden;
+}
+#effectScript .container {
+    overflow: visible;
+}
+#effectScript .swiper {}
+#effectScript .swiper.mySwiper {}
+#effectScript .swiper.mySwiper .swiper-wrapper {
+    align-items: center;
+}
+#effectScript .swiper.mySwiper .swiper-wrapper .swiper-slide{}
+.swiper-slide.hovereffect {}
+.swiper-slide.hovereffect .effImgWrap {
+    position: relative;
+    width: 26.83vw;
+    height: 35.8vw;
+    overflow: hidden;
+    transition: all 700ms ease;
+}
+.swiper-slide.hovereffect .effImgWrap:hover {
+    width: 50vw;
+}
+.swiper-slide.hovereffect .effImgWrap img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+.swiper-slide.hovereffect .effImgWrap .imgHover {
+    position: absolute;
+    width: 50vw;
+    height: 35.8vw;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+.swiper-slide.hovereffect .effImgWrap:hover .imgHover {
+    opacity: 1;
+}
+.swiper-slide.hovereffect:nth-child(even) .effImgWrap {
+    width: 27vw;
+    height: 27vw;
+}
+.swiper-slide.hovereffect:nth-child(even) .effImgWrap:hover {
+    width: 50vw;
+    height: 35.8vw;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFE7;
+    text-align: center;
+    padding-top: 5.2vw;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 300ms ease;
+}
+.swiper-slide.hovereffect .effImgWrap:hover .overlay {
+    opacity: 1;
+    z-index: 9999;
+}
+.overlay p {
+    font-size: 3.15vw;
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.8;
+}
+.overlay div {
+    width: 5.2vw; height: 5.2vw;
+    background: rgba(196,196, 196, 0.7);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 5.5vw;
+}
+.overlay a {
+    font-family: 'Inter';
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFFFE7;
+    line-height: 5.2vw;
+}
+
 /* footer */
