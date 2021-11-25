@@ -68,10 +68,13 @@
                 <span></span>
             </div>
             <div class="home">Portfolio</div>
-            <div class="contactPage"><a href="#">contact</a></div>
+            <div class="contactPage"><a href="contact.html">contact</a></div>
         </div>
     </header>
     <!--//header-->
+
+    <div class="cursor"></div>
+    <!--hoverCursor-->
 
     <main id="main">
         <section id="intro">
@@ -572,23 +575,102 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
+        //이질감&스무스 효과
+        class SmoothScroll {
+            constructor(options) {
+            this.opt = options || {}
+            this.el = this.opt.el ? this.opt.el : '.smooth-scroll'
+            this.speed = this.opt.speed ? this.opt.speed : 0.1
+            this.init()
+        }
+
+        init() {
+            this.scrollY = 0
+            this.smoothScroll = document.querySelectorAll(this.el)[0]
+            this.smoothScroll.classList.add('smooth-scroll')
+            this.introTitle = document.querySelector(".introTitle")
+            this.introDesc = document.querySelector(".introDesc")
+            this.loader = document.querySelector(".loadImg img")
+            this.events()
+            this.update()
+            this.animate()
+        }
+
+        update() {
+            if (this.smoothScroll === null) return
+            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+        }
+
+        pause() {
+            document.body.style.overflow = 'hidden'
+            cancelAnimationFrame(this.raf)
+        }
+
+        play() {
+            document.body.style.overflow = 'inherit'
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        destroy() {
+            this.smoothScroll.classList.remove('smooth-scroll')
+            this.smoothScroll.style.transform = 'none'
+            document.body.style.overflow = 'inherit'
+            window.removeEventListener('resize', this.update)
+            cancelAnimationFrame(this.raf)
+            delete this.smoothScroll
+        }
+
+        animate() {
+            this.scrollY += (window.scrollY - this.scrollY) * this.speed
+            this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.introTitle.style.transform = `translate3d(-50%,${-this.scrollY/4}px,0)`
+            this.introDesc.style.transform = `translate3d(-50%,${this.scrollY/30}px,0)`
+            this.loader.style.transform = `rotate(${this.scrollY/7}deg)`
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        scrollTo(y) {
+            window.scrollTo(0, y)
+        }
+
+        staticScrollTo(y) {
+            cancelAnimationFrame(this.raf)
+            this.scrollY = y
+            window.scrollTo(0, y)
+            this.smoothScroll.style.transform = `translate3d(0,${-y}px,0)`
+            this.play()
+        }
+
+        events() {
+            window.addEventListener('load', this.update.bind(this))
+            window.addEventListener('resize', this.update.bind(this))
+            }
+        }
+
+        const smoothScroll = new SmoothScroll({
+            el: '#main',
+            speed: 0.05
+        })
+
+        //메뉴 오버 이펙트
         const about = document.getElementById("about");
         const menuImg = document.querySelectorAll(".bulr");
         const menuList = document.querySelectorAll(".menu ul li");
         const menu = document.querySelector(".menu");
         const meImgWrap = document.querySelector(".meImgWrap");
-        // console.log(about)
-        // console.log(menuImg);
-        // console.log(menu);
+        const menuAllow = document.querySelectorAll(".menu .menuAllow");
 
         //이미지 보여주기
         menuList.forEach((list, index) => {
             menu.addEventListener("mouseout", function () {
                 menuImg[index].classList.remove("show");
+                gsap.to(menuAllow[index], {duration: 0.8, x: -10, ease: "power2"});
             });
 
             list.addEventListener("mouseover", function () {
-                console.log(list)
+                //화살표 움직임
+                gsap.to(menuAllow[index], {duration: 0.8, x: 20, ease: "power2"});
+
                 menuImg.forEach((el, imgIndex) => {
                     el.classList.remove("show");
                 });
@@ -596,7 +678,7 @@
             });
             //마우스 따라 이미지 움직이기
             about.addEventListener("mousemove", function (e) {
-                console.log(e);
+                // console.log(e);
                 gsap.to(meImgWrap, {
                     duration: 0.8,
                     left: e.clientX,
