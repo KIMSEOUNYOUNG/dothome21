@@ -389,6 +389,7 @@ body {
 .site {
     position: relative;
     background: #DABAB4;
+    overflow: hidden;
 }
 .site .siteInner {
     position: relative;
@@ -459,6 +460,7 @@ body {
 .site:nth-child(even) {
     position: relative;
     background: #FEEEEB;
+    overflow: hidden;
 }
 .site:nth-child(even) .siteInner .num {
     color: #F6D6CF;
@@ -493,23 +495,28 @@ body {
     height: 18.49vw;
     /* background: rgb(128, 71, 71); */
     position: absolute;
-    top: 0;
+    bottom: -8.4%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 .circle .innerCircle {}
 .circle .innerCircle .circleImg {
     position: absolute;
-    background-image: url(../img/circle01.svg);
+    background-image: url(../img/circle02.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
 }
-.circle .innerCircle .circleImg:last-child {
-    background-image: url(../img/circle02.svg);
+.circle.nonColor .innerCircle .circleImg {
+    background-image: url(../img/circle01.svg);
 }
-
+.circle.nonColor {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 /* javaJqu */
 #javaJqu {
     background: #E3DEE8;
@@ -586,17 +593,35 @@ body {
 #effectScript .swiper.mySwiper .swiper-wrapper {
     align-items: center;
 }
+.swiper-wrapper .num {
+    position: absolute;
+    font-size: 41.7vw;
+    font-weight: 900;
+    color: #A5A9B2;
+    letter-spacing: -4vw;
+    opacity: .5;
+    top: -28vw;
+}
+.swiper-wrapper .num:nth-child(2) {left: 52vw;}
+.swiper-wrapper .num:nth-child(3) {left: 108vw;}
+.swiper-wrapper .num:nth-child(4) {left: 163vw;}
+.swiper-wrapper .num:nth-child(5) {left: 213vw;}
 #effectScript .swiper.mySwiper .swiper-wrapper .swiper-slide{}
-.swiper-slide.hovereffect {}
+.swiper-slide.hovereffect {
+    margin-right: 25vw;
+}
 .swiper-slide.hovereffect .effImgWrap {
     position: relative;
-    width: 26.83vw;
-    height: 35.8vw;
+    /* width: 26.83vw;
+    height: 35.8vw; */
+    width: 27vw;
+    height: 27vw;
     overflow: hidden;
     transition: all 700ms ease;
 }
 .swiper-slide.hovereffect .effImgWrap:hover {
     width: 50vw;
+    height: 35.8vw;
 }
 .swiper-slide.hovereffect .effImgWrap img {
     position: absolute;
@@ -616,12 +641,14 @@ body {
     opacity: 1;
 }
 .swiper-slide.hovereffect:nth-child(even) .effImgWrap {
-    width: 27vw;
-    height: 27vw;
+    /* width: 27vw;
+    height: 27vw; */
+    width: 26.83vw;
+    height: 35.8vw;
 }
 .swiper-slide.hovereffect:nth-child(even) .effImgWrap:hover {
     width: 50vw;
-    height: 35.8vw;
+    /* height: 35.8vw; */
 }
 .overlay {
     position: absolute;
@@ -695,5 +722,71 @@ body {
     font-size: 1.04vw;
 }
 .scriptDetail:hover .detailIcon {}
+
+
+/* phpRefer */
+#phpRefer {
+    background: #E9EDE3;
+    padding-top: 30vw;
+}
+
+#phpRefer .ppTitle {
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: 10vw;
+    white-space: nowrap;
+    text-align: center;
+    margin: 16vw 0 11vw;
+    color: #6E7266;
+    margin-bottom: 15vw;
+}
+.site.pp {
+    background: #A3AE95;
+}
+.site.pp .siteInner .num {
+    color: #99A688;
+}
+.site.pp .siteInner .title {
+    color: #E6EAE1;
+}
+.site.pp .siteInner .referDesc {
+    color: #E6EAE1;
+}
+.site.pp .siteInner .jumpBtn {
+    border: 1px solid #E6EAE1;
+}
+.site.pp .siteInner .jumpBtn a {
+    color: #E6EAE1;
+}
+/* even */
+.site.pp:nth-child(even) {
+    background: #E9EDE3;
+}
+.site.pp:nth-child(even) .siteInner .num {
+    color: #D7E1C3;
+}
+.site.pp:nth-child(even) .siteInner .title {
+    color: #6E7266;
+}
+.site.pp:nth-child(even) .siteInner .referDesc {
+    color: #6E7266;
+}
+.site.pp:nth-child(even) .siteInner .jumpBtn {
+    border: 1px solid #6E7266;
+}
+.site.pp:nth-child(even) .siteInner .jumpBtn a {
+    color: #6E7266;
+}
+/* circle */
+.site.pp .circleImg.pp {
+    background-image: url(../img/circle05.svg);
+}
+
+.site.pp .circleImg.pp:last-child {
+    background-image: url(../img/circle06.svg);
+}
+
 
 /* footer */
