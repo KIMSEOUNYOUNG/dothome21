@@ -55,7 +55,7 @@
     <div class="loader">
         <div class="loaderInner">
             <div class="loadImg">
-                <img src="../site-portfolio/assets/img/loader.svg" alt="로더">
+                <img src="assets/img/loader.svg" alt="로더">
             </div>
             <div class="siteTitle">nomore</div>
         </div>
@@ -80,16 +80,22 @@
         <section id="intro">
             <div class="imgWrap">
                 <img src="assets/img/main.jpg" alt="인트로이미지">
-                <div class="introTitle">
+            </div>
+            <div class="introTitle">
+                <div class="textInner">
                     <div>wellcome to</div>
+                </div>
+                <div class="textInner">
                     <div>seonyoung's</div>
+                </div>
+                <div class="textInner">
                     <div>Portfolio</div>
                 </div>
-                <div class="introDesc">
-                    <div>I WILL BECOME A TALENTED PERSON</div>
-                    <div>WHO CONSTANTLY CHALLANEGES AND DEVELOPS</div>
-                    <div>NOTHIG IS IMPOSSIBLE.</div>
-                </div>
+            </div>
+            <div class="introDesc">
+                <div>I WILL BECOME A TALENTED PERSON</div>
+                <div>WHO CONSTANTLY CHALLANEGES AND DEVELOPS</div>
+                <div>NOTHIG IS IMPOSSIBLE.</div>
             </div>
         </section>
         <!--//intro-->
@@ -674,6 +680,21 @@
             el: '#main',
             speed: 0.05
         })
+
+        //글자 나타나기 효과
+        const innerText = document.querySelectorAll(".textInner > div");
+
+        document.addEventListener("DOMContentLoaded", txtTrans())
+
+        function txtTrans(){
+            innerText.forEach((it)=>{
+                it.style.transform = "translateY(0%)"
+            });
+        }
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+        });
 
         //메뉴 오버 이펙트
         const about = document.getElementById("about");

@@ -133,6 +133,7 @@ body {
     position: relative;
 }
 #main #intro .imgWrap {
+    /* position: relative; */
     max-width: 100%;
     overflow: hidden;
 }
@@ -152,9 +153,7 @@ body {
 .introTitle {
     position: absolute;
     left: 50%; top: 8%;
-    transform: translateX(-50%);
-    /* text-align: center;
-    margin-top: 17vh; */
+    text-align: center;
 }
 .introTitle div {
     font-family: 'Silk Serif';
@@ -165,10 +164,12 @@ body {
     font-size: 10vw;
     white-space: nowrap;
     text-align: center;
-}
-.introTitle > div {
     overflow: hidden;
-    /* transform: translateY(135%); */
+    width: 90vw;
+}
+.textInner > div {
+    transform: translateY(135%);
+    transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
 }
 .introDesc {
     position: absolute;
@@ -184,10 +185,6 @@ body {
     font-size: 1.04vw;
     text-align: center;
     white-space: nowrap;
-}
-.introTitle,
-.introDesc {
-    z-index: 10;
 }
 /* about */
 #about {
