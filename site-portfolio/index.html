@@ -121,6 +121,22 @@
                         </li>
                     </ul>
                 </nav>
+                <nav class="menuMobile">
+                    <ul>
+                        <li>
+                            <a href="#about">about</a>
+                            <div class="menuAllow"></div>
+                        </li>
+                        <li>
+                            <a href="#reference">reference</a>
+                            <div class="menuAllow"></div>
+                        </li>
+                        <li>
+                            <a href="#">contact</a>
+                            <div class="menuAllow"></div>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="aboutIntro">
                     <h2>about me</h2>
                     <div class="aboutImg">
@@ -623,7 +639,7 @@
         animate() {
             this.scrollY += (window.scrollY - this.scrollY) * this.speed
             this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
-            this.introTitle.style.transform = `translate3d(-50%,${-this.scrollY/4}px,0)`
+            this.introTitle.style.transform = `translate3d(-50%,${-this.scrollY/7}px,0)`
             this.introDesc.style.transform = `translate3d(-50%,${this.scrollY/30}px,0)`
             this.loader.style.transform = `rotate(${this.scrollY/7}deg)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
@@ -664,12 +680,13 @@
         menuList.forEach((list, index) => {
             menu.addEventListener("mouseout", function () {
                 menuImg[index].classList.remove("show");
-                gsap.to(menuAllow[index], {duration: 0.8, x: -10, ease: "power2"});
+                //화살표 위치 리셋
+                gsap.to(menuAllow[index], {duration: 0.8, x: 0, ease: "power2"});
             });
 
             list.addEventListener("mouseover", function () {
                 //화살표 움직임
-                gsap.to(menuAllow[index], {duration: 0.8, x: 20, ease: "power2"});
+                gsap.to(menuAllow[index], {duration: 0.8, x: 25, ease: "power2"});
 
                 menuImg.forEach((el, imgIndex) => {
                     el.classList.remove("show");
