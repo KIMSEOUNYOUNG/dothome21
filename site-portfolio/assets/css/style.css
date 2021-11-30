@@ -166,6 +166,10 @@ body {
     white-space: nowrap;
     text-align: center;
 }
+.introTitle > div {
+    overflow: hidden;
+    /* transform: translateY(135%); */
+}
 .introDesc {
     position: absolute;
     left: 50%; bottom: 4%;
@@ -301,7 +305,7 @@ body {
     justify-content: center;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 700ms ease;
+    transition: opacity 2000ms ease;
 }
 #about .aboutIntro .aboutImg img {
     width: calc(100%/3);

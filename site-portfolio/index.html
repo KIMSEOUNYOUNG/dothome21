@@ -646,7 +646,7 @@
             this.introDesc.style.transform = `translate3d(-50%,${this.scrollY/30}px,0)`
             this.loader.style.transform = `rotate(${this.scrollY/4}deg)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
-            if( scrollY >= this.aboutImg.offsetTop -2 ){
+            if( scrollY >= this.aboutImg.offsetTop + 200 ){
                 // console.log(this.aboutImg.offsetTop);
                 this.aboutImg.style.opacity = 1;
             }
