@@ -168,7 +168,7 @@ body {
     width: 90vw;
 }
 .textInner > div {
-    transform: translateY(135%);
+    transform: translateY(135%) skewY(5deg);
     transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
 }
 .introDesc {
@@ -229,7 +229,7 @@ body {
 }
 #about .menu li .up {
     display: flex;
-    transform: translateY(135%);
+    transform: translateY(135%) skewY(5deg);
     transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
 } 
 #about .menu li a {
@@ -305,7 +305,7 @@ body {
     line-height: 0.95;
     text-transform: uppercase;
     text-align: center;
-    transform: translateY(135%);
+    transform: translateY(135%) skewY(5deg);
     transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
 }
 #about .aboutIntro .aboutImg {

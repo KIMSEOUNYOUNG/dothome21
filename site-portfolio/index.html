@@ -602,11 +602,17 @@
     </footer>
     <!--//footer-->
 
+    <script src="assets/js/agentCheck.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
+        //호환성 체크
+        window.onload = function() {
+            agentCheck();
+        }
+
         //이질감&스무스 효과
         class SmoothScroll {
             constructor(options) {
@@ -660,7 +666,7 @@
             this.introDesc.style.transform = `translate3d(-50%,${this.scrollY/30}px,0)`
             this.loader.style.transform = `rotate(${this.scrollY/4}deg)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
-            if( scrollY >= this.aboutImg.offsetTop + 200 ){
+            if( scrollY >= this.aboutImg.offsetTop + (window.innerHeight/2 ) ){
                 // console.log(this.aboutImg.offsetTop);
                 this.aboutImg.style.opacity = 1;
             }
@@ -696,7 +702,7 @@
 
         function txtTrans(){
             innerText.forEach((it)=>{
-                it.style.transform = "translateY(0%)"
+                it.style.transform = "translateY(0%) skewY(0deg)"
             });
         }
 
@@ -715,8 +721,8 @@
                 // console.log(absoluteTop);
 
 
-                if( scrollTop >= absoluteTop - (window.innerHeight * 1.5) ){
-                    up.style.transform = "translateY(0%)"
+                if( scrollTop >= absoluteTop - (window.innerHeight * 1.4) ){
+                    up.style.transform = "translateY(0%) skewY(0deg)"
                 }
             })
 
