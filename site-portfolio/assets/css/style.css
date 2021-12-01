@@ -175,8 +175,8 @@ body {
     position: absolute;
     left: 50%; bottom: 4%;
     transform: translateX(-50%);
-    /* text-align: center;
-    margin-top: 185vh; */
+    opacity: 0;
+    transition: opacity 1000ms ease;
 }
 .introDesc div {
     font-family: 'Inter';
@@ -222,6 +222,8 @@ body {
 #about .menu li {
     position: relative;
     display: flex;
+    padding: 0 1vw;
+    overflow: hidden;
 }
 #about .menu li:nth-child(2) {
     margin-left: 5%;

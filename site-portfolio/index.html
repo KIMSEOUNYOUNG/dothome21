@@ -92,7 +92,7 @@
                     <div>Portfolio</div>
                 </div>
             </div>
-            <div class="introDesc">
+            <div class="introDesc appear">
                 <div>I WILL BECOME A TALENTED PERSON</div>
                 <div>WHO CONSTANTLY CHALLANEGES AND DEVELOPS</div>
                 <div>NOTHIG IS IMPOSSIBLE.</div>
@@ -113,15 +113,17 @@
             <div class="container">
                 <nav class="menu">
                     <ul>
-                        <li>
-                            <a href="#about">about</a>
-                            <div class="menuAllow"></div>
+                        <li class="up">
+                            <div>
+                                <a href="#about">about</a>
+                                <div class="menuAllow"></div>
+                            </div>
                         </li>
-                        <li>
+                        <li class="up">
                             <a href="#reference">reference</a>
                             <div class="menuAllow"></div>
                         </li>
-                        <li>
+                        <li class="up">
                             <a href="#">contact</a>
                             <div class="menuAllow"></div>
                         </li>
@@ -144,7 +146,7 @@
                     </ul>
                 </nav>
                 <div class="aboutIntro">
-                    <h2>about me</h2>
+                    <h2 class="up">about me</h2>
                     <div class="aboutImg">
                         <img src="assets/img/about01.jpg" alt="어바웃이미지">
                         <img src="assets/img/about01.jpg" alt="어바웃이미지">
@@ -162,7 +164,7 @@
                 </div>
                 <div class="mySkill">
                     <h2>my skill</h2>
-                    <div class="skillList">
+                    <div class="skillList appear">
                         <div class="listDe">
                             <span>1/</span>
                             <h4>html</h4>
@@ -682,7 +684,7 @@
         })
 
         //글자 나타나기 효과
-        const innerText = document.querySelectorAll(".textInner > div");
+        const innerText = document.querySelectorAll(".textInner > div");       
 
         document.addEventListener("DOMContentLoaded", txtTrans())
 
@@ -694,6 +696,18 @@
 
         window.addEventListener("scroll", () => {
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+            const letterEffect1 = document.querySelectorAll(".up");
+            const letterEffect2 = document.querySelectorAll(".appear");
+
+            // console.log(letterEffect2);
+
+            letterEffect2.forEach(apper=>{
+                //offsetTop 값이 안맞음
+                if( scrollTop >= apper.offsetTop ){
+                apper.style.opacity = 1;
+                }
+            });
         });
 
         //메뉴 오버 이펙트
