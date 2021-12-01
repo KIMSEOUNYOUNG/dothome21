@@ -124,6 +124,17 @@ body {
     width: 100%;
 }
 
+/* up */
+.up {
+    transform: translateY(135%) skewY(5deg);
+    transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
+}
+/* appear */
+.appear {
+    opacity: 0;
+    transition: opacity 1000ms ease;
+}
+
 /* main */
 #main {}
 
@@ -175,8 +186,6 @@ body {
     position: absolute;
     left: 50%; bottom: 4%;
     transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 1000ms ease;
 }
 .introDesc div {
     font-family: 'Inter';
@@ -229,8 +238,6 @@ body {
 }
 #about .menu li .up {
     display: flex;
-    transform: translateY(135%) skewY(5deg);
-    transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
 } 
 #about .menu li a {
     font-family: 'Silk Serif';
@@ -305,8 +312,6 @@ body {
     line-height: 0.95;
     text-transform: uppercase;
     text-align: center;
-    transform: translateY(135%) skewY(5deg);
-    transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
 }
 #about .aboutIntro .aboutImg {
     display: flex;
@@ -337,6 +342,9 @@ body {
     margin-bottom: 19vw;
 }
 .mySkill {
+    overflow: hidden;
+}
+.hiddenWrap2 {
     overflow: hidden;
 }
 .mySkill h2 {
