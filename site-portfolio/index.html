@@ -234,7 +234,7 @@
         <!--//about-->
 
         <section id="reference">
-            <!-- <article id="siteCoding">
+            <article id="siteCoding">
                 <div class="referTitle">
                     <div>web</div>
                     <div>frontend</div>
@@ -357,10 +357,10 @@
                         </div>
                     </div>
                 </div>
-            </article> -->
+            </article>
             <!-- //siteCoding -->
 
-            <!-- <article id="javaJqu">
+            <article id="javaJqu">
                 <div class="jjCoTitle">
                     <div>javascript</div>
                     <div>jquery</div>
@@ -407,10 +407,10 @@
                         </div>
                     </div>
                 </div>
-            </article> -->
+            </article>
             <!--//javaJqu-->
 
-            <!-- <article id="effectScript">
+            <article id="effectScript">
                 <div class="container">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -539,9 +539,9 @@
                 </div>
 
                 <div class="modal"></div>
-            </article> -->
+            </article>
             <!--//effectScript-->
-            <!-- <article id="phpRefer">
+            <article id="phpRefer">
                 <div class="ppTitle">
                     <div>php</div>
                 </div>
@@ -589,9 +589,9 @@
                         </div>
                     </div>
                 </div>
-            </article> -->
+            </article>
             <!--//phpRefer-->
-        </section> -->
+        </section>
         <!--//reference-->
         <footer id="footer"></footer>
         <!--//footer-->
@@ -724,9 +724,6 @@
                 const relativeTop = clientRect.top;
                 const absoluteTop = scrollTop + relativeTop;
 
-                // console.log(absoluteTop);
-
-
                 if( scrollTop >= absoluteTop - (window.innerHeight * 1.4) ){
                     up.style.transform = "translateY(0%) skewY(0deg)"
                 }
@@ -736,9 +733,7 @@
                 const clientRect2 = letterEffect2[apperIndex].getBoundingClientRect();
                 const relativeTop2 = clientRect2.top;
                 const absoluteTop2 = scrollTop + relativeTop2;
-                //offsetTop 값이 안맞음
-                console.log(scrollTop);
-                console.log(absoluteTop2);
+
                 if( scrollTop >= absoluteTop2 - window.innerHeight ){
                     apper.style.opacity = 1;
                 }
@@ -781,16 +776,13 @@
             });
         });
 
-        //사진 페이드 인
-
-
         //스와이퍼
-        // var swiper = new Swiper(".mySwiper", {
-        //     slidesPerView: "auto",
-        //     // spaceBetween: 400,
-        //     centeredSlides: true,
-        //     grabCursor: true,
-        // });
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            // spaceBetween: 400,
+            centeredSlides: true,
+            grabCursor: true,
+        });
 
         //디테일 모달
         // const modal = document.querySelectorAll(".scriptDetail")
