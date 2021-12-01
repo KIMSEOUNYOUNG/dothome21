@@ -163,6 +163,7 @@ body {
 .introTitle {
     position: absolute;
     left: 50%; top: 8%;
+    transform: translateX(-50%);
     text-align: center;
 }
 .introTitle div {
