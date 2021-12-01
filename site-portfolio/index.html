@@ -703,19 +703,19 @@
         window.addEventListener("scroll", () => {
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
-            // const upTarget = document.querySelectorAll(".upTarget");
             const letterEffect1 = document.querySelectorAll(".up");
             const letterEffect2 = document.querySelectorAll(".appear");
 
-            // upTarget.forEach(target=>{
-            //     console.log(target.offsetTop);
-            // })
-
             letterEffect1.forEach((up, upIndex)=>{
                 // console.log(scrollTop);
-                console.log(up.offsetTop);
+                const clientRect = letterEffect1[upIndex].getBoundingClientRect();
+                const relativeTop = clientRect.top;
+                const absoluteTop = scrollTop + relativeTop;
 
-                if( scrollTop >= up.offsetTop ){
+                // console.log(absoluteTop);
+
+
+                if( scrollTop >= absoluteTop - (window.innerHeight * 1.5) ){
                     up.style.transform = "translateY(0%)"
                 }
             })
