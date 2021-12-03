@@ -236,11 +236,17 @@
         <section id="reference">
             <article id="siteCoding">
                 <div class="referTitle">
-                    <div>web</div>
-                    <div>frontend</div>
-                    <div>developer</div>
+                    <div class="hiddenWrap2">
+                        <div class="up">web</div>
+                    </div>
+                    <div class="hiddenWrap2">
+                        <div class="up">frontend</div>
+                    </div>
+                    <div class="hiddenWrap2">
+                        <div class="up">developer</div>
+                    </div>
                 </div>
-                <p class="referIntro">
+                <p class="referIntro appear">
                     I have collected six months of works - <br>
                     including web standard compliance sites,<br>
                     Naver influencer, Clova, Whale, Megabox site coding,<br>
@@ -248,14 +254,20 @@
                 </p>
                 <div class="underAllow"></div>
                 <div class="siCoTitle">
-                    <div>site</div>
-                    <div>coding</div>
+                    <div class="hiddenWrap2">
+                        <div class="up">site</div>
+                    </div>
+                    <div class="hiddenWrap2">
+                        <div class="up">coding</div>
+                    </div>
                 </div>
                 <div class="site">
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">01</span>
-                            <h2 class="title">site coding<br>by type</h2>
+                            <div class="hiddenWrap3">
+                                <h2 class="title up">Site coding<br>by type</h2>
+                            </div>
                             <p class="referDesc">
                                 기본 레이아웃을 바탕으로 카드 타입, 이미지 타입 등의 섹션별 코딩을 작업하셨습니다.<br>
                                 스와이퍼 플러그인을 사용한 슬라이더 타입과 CSS의 transform, transition 속성으로 간단한 애니메이션을 입힌 오버 이펙트 효과를
@@ -274,7 +286,9 @@
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">02</span>
-                            <h2 class="title">naver site</h2>
+                            <div class="hiddenWrap3">
+                                <h2 class="title up">naver site</h2>
+                            </div>
                             <p class="referDesc">
                                 네이버 인플루언서, 클로바, 웨일 등의 사이트를 참조하여
                                 직접 레이아웃을 작성하여 코딩한 사이트입니다.<br>
@@ -303,7 +317,9 @@
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">03</span>
-                            <h2 class="title">megabox site</h2>
+                            <div class="hiddenWrap3">
+                                <h2 class="title up">megabox site</h2>
+                            </div>
                             <p class="referDesc">
                                 메가박스 사이트의 메인 페이지를 재현한 사이트 코딩입니다. 웹표준을 준수하여 작업하였으며 반응형으로 제작되어 각종 기기와 브라우저에서 대응이 가능하게
                                 만들었습니다.<br>
@@ -322,7 +338,9 @@
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">04</span>
-                            <h2 class="title">apple site</h2>
+                            <div class="hiddenWrap3">
+                                <h2 class="title up">apple site</h2>
+                            </div>
                             <p class="referDesc" style="top:-4.3vw">
                                 애플의 아이패드 사이트에서 영감을 얻어 제작한 사이트입니다.
                                 스크롤탑 값에 맞춰 애니메이션이 작동하도록 설계되었으며,
@@ -342,7 +360,9 @@
                     <div class="siteInner">
                         <div class="container">
                             <span class="num">05</span>
-                            <h2 class="title">react site</h2>
+                            <div class="hiddenWrap3">
+                                <h2 class="title up">react site</h2>
+                            </div>
                             <p class="referDesc" style="top:-4.3vw">
                                 메가박스 사이트의 메인 페이지를 재현한 사이트 코딩입니다. 웹표준을 준수하여 작업하였으며 반응형으로 제작되어 각종 기기와 브라우저에서 대응이 가능하게
                                 만들었습니다.<br>
@@ -647,7 +667,7 @@
 
         update() {
             if (this.smoothScroll === null) return
-            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height/2.1}px`
         }
 
         pause() {

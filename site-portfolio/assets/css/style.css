@@ -473,13 +473,20 @@ body {
     top: -60vw;
     left: -3vw;
 }
-.site .siteInner .title {
+.hiddenWrap3 {
     position: absolute;
+    top: -18vw;
+    z-index: 10;
+    padding-bottom: 2vw;
+    overflow: hidden;
+}
+.site .siteInner .title {
+    /* position: absolute; */
     font-weight: normal;
     line-height: 0.9;
     font-size: 7.8125vw;
     z-index: 10;
-    top: -18vw;
+    /* top: -18vw; */
     /* left: -0.7vw; */
     letter-spacing: -.05vw;
     color: #FFFFE7;
@@ -535,10 +542,11 @@ body {
     left: 26vw;
 }
 
-.site:nth-child(even) .siteInner .title {
-    top: -18vw;
-    color: #767070;
+.site:nth-child(even) .siteInner .hiddenWrap3 {
     right: 0;
+}
+.site:nth-child(even) .siteInner .title {
+    color: #767070;
 }
 .site:nth-child(even) .siteInner .referDesc {
     color: #767070;
@@ -575,6 +583,7 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    animation: rotation 12s linear infinite;
 }
 .circle.nonColor .innerCircle .circleImg {
     background-image: url(../img/circle01.svg);
@@ -584,6 +593,14 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 /* javaJqu */
 #javaJqu {
