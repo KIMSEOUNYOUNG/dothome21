@@ -177,6 +177,7 @@ body {
     text-align: center;
     overflow: hidden;
     width: 90vw;
+    padding-top: 1vw;
 }
 .textInner > div {
     transform: translateY(135%) skewY(5deg);
@@ -355,6 +356,7 @@ body {
     font-size: 5vw;
     text-transform: uppercase;
     float: right;
+    padding-top: 1vw;
 }
 .mySkill .skillList {
     width: 100%;
@@ -641,7 +643,7 @@ body {
 .site.jj .circleImg.jsjq {
     background-image: url(../img/circle03.svg);
 }
-.site.jj .circleImg.jsjq:last-child {
+.site.jj .circle.nonColor .circleImg.jsjq {
     background-image: url(../img/circle04.svg);
 }
 
@@ -847,11 +849,11 @@ body {
 }
 /* circle */
 .site.pp .circleImg.pp {
-    background-image: url(../img/circle05.svg);
+    background-image: url(../img/circle06.svg);
 }
 
-.site.pp .circleImg.pp:last-child {
-    background-image: url(../img/circle06.svg);
+.site.pp .circle.nonColor .circleImg.pp {
+    background-image: url(../img/circle05.svg);
 }
 
 
