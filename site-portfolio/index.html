@@ -252,7 +252,11 @@
                     Naver influencer, Clova, Whale, Megabox site coding,<br>
                     team projects, animations, and figma etc.<br>
                 </p>
-                <div class="underAllow"></div>
+                <div class="allowHidden">
+                    <div class="hiddenWrap2 under down">
+                        <img src="assets/img/allow.svg" alt="화살표" class="underAllow">
+                    </div>
+                </div>
                 <div class="siCoTitle">
                     <div class="hiddenWrap2">
                         <div class="up">site</div>
@@ -744,15 +748,16 @@
 
             const letterEffect1 = document.querySelectorAll(".up");
             const letterEffect2 = document.querySelectorAll(".appear");
+            const letterEffect3 = document.querySelector(".down");
 
-            // console.log(letterEffect2);
+            // console.log(letterEffect3);
 
             letterEffect1.forEach((up, upIndex)=>{
                 const clientRect = letterEffect1[upIndex].getBoundingClientRect();
                 const relativeTop = clientRect.top;
                 const absoluteTop = scrollTop + relativeTop;
 
-                if( scrollTop >= absoluteTop - (window.innerHeight * 1.4) ){
+                if( scrollTop >= absoluteTop - (window.innerHeight * 1.2) ){
                     up.style.transform = "translateY(0%) skewY(0deg)"
                 }
             })
@@ -766,6 +771,16 @@
                     apper.style.opacity = 1;
                 }
             });
+
+            const clientRect3 = letterEffect3.getBoundingClientRect();
+            const relativeTop3 = clientRect3.top;
+            const absoluteTop3 = scrollTop + relativeTop3;
+
+            // console.log(absoluteTop3);
+
+            if ( scrollTop >= absoluteTop3 + (window.innerHeight / 2.5) ){
+                letterEffect3.style.transform = "translateY(0%) rotate(90deg)"
+            };
         });
 
         //메뉴 오버 이펙트
