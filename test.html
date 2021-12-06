@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        process.stdin.setEncoding('utf8');
-        process.stdin.on('data', data => {
-            const n = data.split(" ");
-            const a = Number(n[0]), b = Number(n[1]);
-            console.log(a);
-            console.log(b);
-        });
+        const animals = {
+            cat: {
+                name: "나비"
+            },
+            lion: {
+                name: "호랑이"
+            }
+        }
+        const dogName = animals.dog?.name;
+        console.log(dogName); // 결과는??
     </script>
 </body>
+
 </html>

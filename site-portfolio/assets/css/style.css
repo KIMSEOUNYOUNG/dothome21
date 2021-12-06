@@ -499,6 +499,7 @@ body {
     /* left: -0.7vw; */
     letter-spacing: -.05vw;
     color: #FFFFE7;
+    text-transform: capitalize;
 }
 .site .siteInner .referDesc {
     position: absolute;
@@ -667,10 +668,10 @@ body {
 }
 /* circle */
 .site.jj .circleImg.jsjq {
-    background-image: url(../img/circle03.svg);
+    background-image: url(../img/circle04.svg);
 }
 .site.jj .circle.nonColor .circleImg.jsjq {
-    background-image: url(../img/circle04.svg);
+    background-image: url(../img/circle05.svg);
 }
 
 /* effectScript */
@@ -884,6 +885,66 @@ body {
 
 
 /* footer */
+#contact{
+    width: 100%;
+    position: relative;
+}
+#main #contact .imgWrap {
+    /* position: relative; */
+    max-width: 100%;
+    height: 120vh;
+    overflow: hidden;
+}
+#contact .imgWrap::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 28, 26, 0.6);
+}
+#main #contact .imgWrap img{
+    vertical-align: top;
+    width: 100vw;
+    top: -60%;
+}
+.contactTitle {
+    position: absolute;
+    left: 50%; top: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.contactTitle div {
+    font-family: 'Silk Serif';
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: 10vw;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    width: 90vw;
+    padding-top: 1vw;
+}
+.textInner > div {
+    transform: translateY(135%) skewY(5deg);
+    transition: transform 1.5s cubic-bezier(.22, .61, .36, 1);
+}
+.contactDesc {
+    position: absolute;
+    left: 50%; bottom: 40%;
+    transform: translateX(-50%);
+}
+.contactDesc div {
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.04vw;
+    text-align: center;
+    white-space: nowrap;
+}
 
 
 /* mediaquery */
@@ -927,7 +988,25 @@ body {
     .introDesc {
         z-index: 10;
     }
-    .introDesc > div {
+    .contactDesc > div {
         font-size: 2vw;
     }
+    #contact {
+        position: relative;
+        background: url(../img/contact.jpg);
+        background-position: center top;
+        background-size: cover;
+        height: 115vh;
+        overflow: hidden;
+    }
+    #main #contact .imgWrap img {
+        display: none;
+    }
+    .contactTitle,
+    .contactDesc {
+        z-index: 10;
+    }
+    .contactDesc div {
+        font-size: 2vw;
+    } 
 }
